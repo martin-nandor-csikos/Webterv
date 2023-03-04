@@ -227,6 +227,15 @@ a:visited {
         width: 80%;
     }
 
+    #infoBar p {
+        font-size: 16px;
+    }
+
+    #infoBar div {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
     #menuBar a {
         padding: 24px;
 
@@ -417,8 +426,6 @@ a:visited {
 
 /*Teljes formra kiható*/
 #selfServiceForm {
-    margin-left: 50px;
-    
     font-size: 18px;
 }
 #selfServiceForm li {
@@ -442,9 +449,6 @@ a:visited {
 }
 
 /*Személyes adatok*/
-#personalInfo {
-    width: 480px;
-}
 #personalInfo input {
     width: 450px;
 }
@@ -456,15 +460,13 @@ a:visited {
     outline: none;
 }
 
-/*Munkával kapcsolatos kérdések*/
-#jobRelated {
-    width: 480px;
-}
-
 /*Személyes adatok + munkával kapcsolatos kérdések*/
 #formInputs {
     display: flex;
     justify-content: center;
+}
+#formInputs fieldset {
+    width: 480px;
 }
 
 /*Gombok*/
@@ -492,3 +494,36 @@ a:visited {
         border: 2px solid rgb(206, 86, 0);
     }
 }
+
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+    #formInputs {
+        display: block;
+}
+
+    #formInputs fieldset {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #formInputs fieldset {
+        width: 600px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #formInputs {
+        display: flex;
+        justify-content: center;
+    }
+
+    #formInputs fieldset {
+        margin: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 480px;
+    }
+} 
