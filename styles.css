@@ -187,6 +187,55 @@ a:visited {
     text-align: center;
 }
 
+/*Header reszponzivitás*/
+/*Ha lesz rá türelmem, még megcsinálom*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+    #indexHeader {
+        width: 100%;
+    }
+
+    #infoBar p {
+        font-size: 12px;
+    }
+
+    #infoBar div {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    #menuBar a {
+        font-size: 12px;
+        width: 6.2%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #menuBar a {
+        font-size: 14px;
+        width: 10%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #indexHeader {
+        width: 80%;
+    }
+
+    #menuBar a {
+        padding: 24px;
+
+        font-size: 19px;
+
+        width: 15%;
+    }
+}
+
 
 /*index.html*/
 /*Introduction szekció*/
@@ -201,7 +250,10 @@ a:visited {
 }
 
 #introduction video {
-    width: 900px;
+    width: 50%;
+    height: fit-content;
+
+    margin: auto;
 
     margin-left: 100px;
 
@@ -215,6 +267,7 @@ a:visited {
     margin-right: 80px;
 
     padding-top: 30px;
+    width: 50%;
 }
 #introductionText strong {
     font-size: 40px;
@@ -261,6 +314,97 @@ a:visited {
 
     text-shadow: 2px 2px 10px #000;
 }
+
+/*Reszponzivitás*/
+/*Ha lesz rá türelmem, még megcsinálom*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+    #introduction {
+        display: block;
+    }
+
+    #introduction video {
+        margin-left: 0px;
+        margin-right: 0px;
+
+        display: block;
+        margin: auto;
+
+        width: 600px;
+    }
+
+    #introductionText {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        margin: auto;
+
+        width: 95%;
+    }
+
+    #introductionText p:last-of-type {
+        margin-bottom: 0px;
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #introduction video {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 10px;
+
+        display: block;
+        margin: auto;
+
+        width: 700px;
+    }
+
+    #introductionText {
+        margin-left: 40px;
+        margin-right: 40px;
+
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #introductionText {
+        margin-left: 40px;
+        margin-right: 40px;
+
+        display: block;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #introduction {
+        display: flex;
+        align-items: center;
+    }
+
+    #introduction video {
+        width: 50%;
+        height: fit-content;
+    
+        margin: 0px;
+    
+        margin-left: 100px;
+    
+        clear: left;
+    
+        position: relative;
+    }
+
+    #introductionText {
+        margin-left: 80px;
+        margin-right: 80px;
+    
+        padding-top: 30px;
+        width: 50%;
+    }
+}
+
 
 /*selfService.html*/
 /*Cím*/
