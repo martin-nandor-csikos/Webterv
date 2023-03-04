@@ -32,6 +32,8 @@ a:visited {
 
     /*ne lógjon ki a menü elemek háttere a sarkokon*/
     overflow: hidden;
+
+    z-index: 999;
 }
 /*Felső infó bar*/
 #infoBar {
@@ -223,6 +225,9 @@ a:visited {
     text-align: justify;
 
     font-size: 20px;
+}
+#introductionText p::first-letter {
+    font-size: 24px;
 }
 #introductionText a[id="selfServiceLink"] {
     /*Talán majd meg kell változtatni*/
