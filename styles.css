@@ -262,6 +262,81 @@ a:visited {
 }
 
 
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#selfServiceForm {
+    margin-left: 50px;
+    
+    font-size: 18px;
+}
+#selfServiceForm li {
+    list-style: none;
+}
+#selfServiceForm legend {
+    font-size: 24px;
+    font-weight: bold;
+}
+#selfServiceForm input {
+    padding: 7px 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+#personalInfo {
+    width: 480px;
+}
+#jobRelated {
+    width: 480px;
+}
+#personalInfo input {
+    width: 450px;
+}
+#personalInfo input:focus {
+    animation: borderOnFocus 0.2s;
+    animation-fill-mode: forwards;
+    border-radius: 4px;
+
+    outline: none;
+}
+#selfServiceForm fieldset {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#formInputs {
+    display: flex;
+    justify-content: center;
+}
+#inputButtons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+#inputButtons input {
+    width: 480px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    background-color: #EDDBC7;
+
+    font-size: 16px;
+}
+
+@keyframes borderOnFocus {
+    100% {
+        border: 2px solid rgb(206, 86, 0);
+    }
+}
+
 /*Nyomtatási stíluslap*/
 /*még nincs kész*/
 @media print {

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Önkéntesség - SZKA</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/icon.png">
+</head>
+
+<body>
+    <!--Header-->
+    <header id="indexHeader">
+        <!--Small info bar-->
+        <div id="infoBar">
+            <div id="closingHours">
+                <p>Nyitvatartás: Hétfő - Szombat, 8:00 - 20:00</p>
+            </div>
+
+            <div id="phoneNumber">
+                <p>Tel.: +36-99-999-9999</p>
+            </div>
+
+            <div id="location">
+                <p>6726 Szeged, X körút 7</p>
+            </div>
+        </div>
+
+        <!--Name-->
+        <div id="name">
+            <h1>Szegedi Kutyamenhely Alapítvány</h1>
+            <h2>SZKA</h2>
+        </div>
+
+        <!--Menu bar-->
+        <nav id="menuBar">
+            <a href="index.html" id="main">Főoldal</a>
+            <a href="" id="about">Rólunk</a>
+            <a href="" id="dogs">Kutyáink</a>
+            <a href="" id="adopt">Örökbefogadás</a>
+            <a href="" id="webshop">Webshop</a>
+            <a href="#" id="selfService" class="active">Önkéntesség</a>
+            <a href="" id="contacts">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <h1 class="title">Önkéntes munkára való jelentkezés</h1>
+
+    <!--selfServiceForm-->
+    <form action="selfService.html" method="POST" id="selfServiceForm">
+        <!--formInputs-->
+        <div id="formInputs">
+
+            <!--personalInfo-->
+            <fieldset id="personalInfo">
+                <legend>Személyes adatok</legend>
+    
+                <label for="lastname">Vezetéknév</label>
+                <br>
+                <input type="text" name="lastname" id="lastname" required>
+                <br><br>
+    
+                <label for="firstname">Keresztnév</label>
+                <br>
+                <input type="text" name="firstname" id="firstname" required>
+                <br><br>
+    
+                <label for="email">E-mail cím</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+    
+                <label for="tel">Telefonszám</label>
+                <br>
+                <input type="tel" name="tel" id="tel" required>
+                <br><br>
+    
+                <label for="birthdate">Születési dátum</label>
+                <br>
+                <input type="date" name="birthdate" id="birthdate" required>
+            </fieldset>
+        
+            <!--jobRelated-->
+            <fieldset id="jobRelated">
+                <legend>Munkával kapcsolatos kérdések</legend>
+    
+                <label>Milyen pozíciót vállalnál el?</label>
+                <br>
+                <ul>
+                    <li>
+                        <input type="radio" name="position" id="securityGuard" value="Biztonsagi_or" required>
+                        <label for="securityGuard">Biztonsági őr</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="position" id="customerService" value="Vevoszolgalat">
+                        <label for="customerService">Vevőszolgálat</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="position" id="animalCare" value="Allatgondozas">
+                        <label for="animalCare">Állatgondozás</label>
+                    </li>
+                </ul>
+                <br><br>
+    
+                <label>Hány év munkatapasztalod van a kiválasztott pozíciódban?</label>
+                <br>
+                <ul>
+                    <li>
+                        <input type="radio" name="workExp" id="beginner" value="Palyakezdo" required>
+                        <label for="beginner">Pályakezdő vagyok</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="workExp" id="year1-2" value="1-2_ev">
+                        <label for="year1-2">1 - 2 év</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="workExp" id="year3-4" value="3-4_ev">
+                        <label for="year3-4">3 - 4 év</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="workExp" id="year5+" value="5+_ev">
+                        <label for="year5+">5+ év</label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+
+        <!--inputButtons-->
+        <div id="inputButtons">
+            <br>
+            <input type="submit" value="Elküldés">
+            <br>
+            <input type="reset" value="Visszaállítás">
+        </div>
+    </form>
+</body>
+</html>
