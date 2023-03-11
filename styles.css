@@ -508,17 +508,9 @@ a:visited {
 
     background-color: #faedcd;
 
-    animation: inputButtonBgColorOnHover 0.4s forwards;
-
     font-size: 16px;
 }
 
-@keyframes inputButtonBgColorOnHover {
-    from {}
-    to {
-        background-color: #d4a373;
-    }
-}
 
 /*Border animáció*/
 @keyframes borderOnFocus {
@@ -559,3 +551,48 @@ a:visited {
         width: 480px;
     }
 } 
+
+
+/*Nyomtatási stíluslap*/
+@media print {  
+    p, #introductionText strong, #introductionText #year, a, a:visited, #introductionText a[id="selfServiceLink"] {
+        font-size: 12pt;
+        text-shadow: none;
+        color: #000;
+    }
+
+    video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before {
+        display: none;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+        font-size: 14pt;
+        text-shadow: none;
+        color: #000;
+    }
+
+    body, a.active, #name, .quote, #inputButtons input {
+        background-color: #fff;
+        background-image: none;
+    }
+
+    #indexHeader {
+        width: 100%;
+    }
+
+    #introductionText {
+        width: 100%;
+        margin: 0pt 0pt;
+    }
+
+    .quote p {
+        text-shadow: none;
+        color: #000;
+    }
+
+
+    @page {
+        margin: 2cm;
+    }
+}
