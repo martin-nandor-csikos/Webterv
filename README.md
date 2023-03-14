@@ -7,4 +7,5 @@ A weboldal áll 1db CSS állományból (styles.css), és 5db HTML fájlból. Az 
 
 ## Referenciák, weboldalak, amikből ötleteket merítettünk
 www.adaptics.hu/
+
 https://rex.hu/
