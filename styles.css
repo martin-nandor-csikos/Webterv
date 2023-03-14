@@ -511,6 +511,25 @@ a:visited {
     font-size: 16px;
 }
 
+/*kutyaink.html*/
+#kutyaktablazat {
+    margin-left: 2cm;
+    margin-bottom: 1cm;
+}
+.leiras {
+    padding-left: 1cm;
+    font-size: 25px;
+    font-style: Verdana ;
+}
+.leiras p {
+    margin-left: 0px;
+}
+p {
+    margin-left: 2cm;
+    font-size: 35px;
+}
+
+
 
 /*Border animáció*/
 @keyframes borderOnFocus {
@@ -595,4 +614,5 @@ a:visited {
     @page {
         margin: 2cm;
     }
+
 }
