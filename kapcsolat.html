@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kutyáink - SZKA</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/icon.png">
+</head>
+<body>
+    <!--Header-->
+    <header id="indexHeader">
+        <!--Small info bar-->
+        <div id="infoBar">
+            <div id="closingHours">
+                <p>Nyitvatartás: Hétfő - Szombat, 8:00 - 20:00</p>
+            </div>
+
+            <div id="phoneNumber">
+                <p>Tel.: +36-99-999-9999</p>
+            </div>
+
+            <div id="location">
+                <p>6726 Szeged, X körút 7</p>
+            </div>
+        </div>
+
+        <!--Name-->
+        <div id="name">
+            <h1>Szegedi Kutyamenhely Alapítvány</h1>
+            <h2>SZKA</h2>
+        </div>
+
+        <!--Menu bar-->
+        <nav id="menuBar">
+            <a href="index.html" id="main" class="notActive">Főoldal</a>
+            <a href="" id="about" class="notActive">Rólunk</a>
+            <a href="kutyaink.html" id="dogs" class="notActive">Kutyáink</a>
+            <a href="" id="adopt" class="notActive">Örökbefogadás</a>
+            <a href="" id="webshop" class="notActive">Webshop</a>
+            <a href="selfService.html" id="selfService" class="notActive">Önkéntesség</a>
+            <a href="kapcsolat.html" id="contacts" class="active">Kapcsolat</a>
+        </nav>
+    </header>
+	<h1 class="title">Kapcsolat</h1>
+	<p>Az alábbi form segítségével léphet kapcsolatba velünk.</p>
+	<form method="post" id="contactform">
+		<label for="name">Név: </label>
+        <br>
+		<input type="text" name="name" required><br>
+
+		<label for="email">Email: </label>
+        <br>
+		<input type="email" name="email" required><br>
+
+		<label for="message">Üzenet: </label>
+        <br>
+		<textarea name="message" required></textarea><br>
+
+		<input type="submit" value="Küldés">
+	</form>
+</body>
+</html>
