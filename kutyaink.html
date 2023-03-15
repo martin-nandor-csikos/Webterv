@@ -39,110 +39,192 @@
         <nav id="menuBar">
             <a href="index.html" id="main" class="notActive">Főoldal</a>
             <a href="" id="about" class="notActive">Rólunk</a>
-            <a href="kutyaink.html" id="dogs" class="active">Kutyáink</a>
+            <a href="#" id="dogs" class="active">Kutyáink</a>
             <a href="" id="adopt" class="notActive">Örökbefogadás</a>
             <a href="" id="webshop" class="notActive">Webshop</a>
-            <a href="#" id="selfService" class="notActive">Önkéntesség</a>
+            <a href="selfService.html" id="selfService" class="notActive">Önkéntesség</a>
             <a href="" id="contacts" class="notActive">Kapcsolat</a>
         </nav>
     </header>
 
-    <h1 class="title">Kutyáink</h1>
-    <p style="font-style: italic;">Ha bármelyik kutyánk felkeltette érdeklődésed, kérjük jelezd az alábbi telefonszámon: +36 30 222 4232!</p>
-    <table id="kutyaktablazat">
-		<tr>
-			<td><img src="img/magyar_vizsla.jpg" width="600px" alt="vizsla"></td>
-			<td class="leiras">
-				<h2>Fanta</h2>
-				<p> 
-                    Fajta: magyar vizsla
-                    <br>
-                    Életkor: 1 év
-                    <br>
-                    Nálunk töltött idő: 1 év
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/puli_kolykok.jpg" width="600px" alt="pulik"></td>
-			<td class="leiras">
-				<h2>Mici, Tici és Pici</h2>
-				<p>
-                    Fajta: puli
-                    <br>
-                    Életkor: 4 hónap
-                    <br>
-                    Nálunk töltött idő: 2 hónap
-                    <br>
-                    Mici, Tici és Pici testvérek.
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/border-collie-ezust.jpg" width="600px" alt="bordercollie"></td>
-			<td class="leiras">
-				<h2>Lara</h2>
-				<p>
-                    Fajta: border collie
-                    <br>
-                    Életkor: 3 év
-                    <br>
-                    Nálunk töltött idő: 3 hónap
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/bulldog.jpg" width="600px" alt="bulldog"></td>
-			<td class="leiras">
-				<h2>Andy</h2>
-				<p>
-                    Fajta: bulldog
-                    <br>
-                    Életkor: 2 év
-                    <br>
-                    Nálunk töltött idő: 2 év
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/tacsko.jpg" width="600px" alt="tacsko"></td>
-			<td class="leiras">
-				<h2>Lujzi</h2>
-				<p>
-                    Fajta: tacskó
-                    <br>
-                    Életkor: 6 hónap
-                    <br>
-                    Nálunk töltött idő: 6 hónap
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/golden_retriever.JPG" width="600px" alt="goldenretriever"></td>
-			<td class="leiras">
-				<h2>Goldi</h2>
-				<p>
-                    Fajta: golden retriever
-                    <br>
-                    Életkor:5 év
-                    <br>
-                    Nálunk töltött idő: 3 hónap
-                </p>
-			</td>
-		</tr>
-		<tr>
-			<td><img src="img/nemet_juhasz.jpg" width="600px" alt="nemetjuhasz"></td>
-			<td class="leiras">
-				<h2>Mancs</h2>
-				<p>
-                    Fajta: német juhászkutya
-                    <br>
-                    Életkor: 3 év
-                    <br>
-                    Nálunk töltött idő: 1 év
-                </p>
-			</td>
-		</tr>
-	</table>
+    <div id="kutyak">
+        <h1 class="title">Kutyáink</h1>
+        <i>Ha bármelyik kutyánk felkeltette érdeklődésed, vedd fel velünk a kapcsolatot.</i>
+        
+        <div id="tablazatok">
+            <table id="kutyaktablazatBal">
+                <tr>
+                    <th id="kepBal">Kép</th>
+                    <th id="leirasBal">Leírás</th>
+                </tr>
+                <tr>
+                    <td headers="kepBal"><img src="img/magyar_vizsla.jpg" alt="vizsla"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Fanta</h2>
+                        <p> 
+                            <strong>Fajta</strong>: <em>magyar vizsla</em>
+                            <br>
+                            <strong>Életkor</strong>: <em>1 év</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>1 év</em>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td headers="kepBal"><img src="img/border-collie-ezust.jpg" alt="bordercollie"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Lara</h2>
+                        <p>
+                            <strong>Fajta</strong>: <em>border collie</em>
+                            <br>
+                            <strong>Életkor</strong>: <em>3 év</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>:<em> 3 hónap</em>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td headers="kepBal"><img src="img/bulldog.jpg" alt="bulldog"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Andy</h2>
+                        <p>
+                            <strong>Fajta</strong>:<em> bulldog</em>
+                            <br>
+                            <strong>Életkor</strong>: <em>2 év</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>2 év</em>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td headers="kepBal"><img src="img/tacsko.jpg" alt="tacsko"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Lujzi</h2>
+                        <p>
+                            <strong>Fajta</strong>: <em>tacskó</em>
+                            <br>
+                            <strong>Életkor</strong>: <em>6 hónap</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>6 hónap</em>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td headers="kepBal"><img src="img/golden_retriever.JPG" alt="goldenretriever"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Goldi</h2>
+                        <p>
+                            <strong>Fajta</strong>: <em>golden retriever</em>
+                            <br>
+                            <strong>Életkor</strong>: <em>5 év</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>3 hónap</em>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td headers="kepBal"><img src="img/nemet_juhasz.jpg" alt="nemetjuhasz"></td>
+                    <td headers="leirasBal" class="leiras">
+                        <h2>Mancs</h2>
+                        <p>
+                            <strong>Fajta</strong>: <em>német juhászkutya</em>
+                            <br>
+                            <strong>Életkor</strong>:<em> 3 év</em>
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>1 év</em>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+    
+    
+            <table id="kutyaktablazatJobb">
+                <tr>
+                    <th id="leirasJobb">Leírás</th>
+                    <th id="kepJobb">Kép</th>
+                </tr>
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Fanta</h2>
+                        <p> 
+                            <strong>Fajta</strong>: magyar vizsla
+                            <br>
+                            <strong>Életkor</strong>: 1 év
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: <em>1 év</em>
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/magyar_vizsla.jpg" alt="vizsla"></td>
+                </tr>
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Lara</h2>
+                        <p>
+                            <strong>Fajta</strong>: border collie
+                            <br>
+                            <strong>Életkor</strong>: 3 év
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: 3 hónap
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/border-collie-ezust.jpg" alt="bordercollie"></td>
+                </tr>
+                
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Andy</h2>
+                        <p>
+                            <strong>Fajta</strong>: bulldog
+                            <br>
+                            <strong>Életkor</strong>: 2 év
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: 2 év
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/bulldog.jpg" alt="bulldog"></td>
+                </tr>
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Lujzi</h2>
+                        <p>
+                            <strong>Fajta</strong>: tacskó
+                            <br>
+                            <strong>Életkor</strong>: 6 hónap
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: 6 hónap
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/tacsko.jpg" alt="tacsko"></td>
+                </tr>
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Goldi</h2>
+                        <p>
+                            <strong>Fajta</strong>: golden retriever
+                            <br>
+                            <strong>Életkor</strong>:5 év
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: 3 hónap
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/golden_retriever.JPG" alt="goldenretriever"></td>
+                </tr>
+                <tr>
+                    <td headers="leirasJobb" class="leiras">
+                        <h2>Mancs</h2>
+                        <p>
+                            <strong>Fajta</strong>: német juhászkutya
+                            <br>
+                            <strong>Életkor</strong>: 3 év
+                            <br>
+                            <strong>Nálunk töltött idő</strong>: 1 év
+                        </p>
+                    </td>
+                    <td headers="kepJobb"><img src="img/nemet_juhasz.jpg" alt="nemetjuhasz"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
