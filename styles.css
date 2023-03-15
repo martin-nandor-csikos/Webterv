@@ -1,4 +1,3 @@
-/*Univerzális CSS paraméterek*/
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
 
@@ -589,6 +588,11 @@ a:visited {
 }
 #kutyak img {
     width: 400px;
+}
+
+/*kapcsolat.html*/
+#contactform > label, input, textarea {
+    margin-left: 2cm;
 }
 
 /*Reszponzivitás*/
