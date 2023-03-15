@@ -511,47 +511,6 @@ a:visited {
     font-size: 16px;
 }
 
-
-/*kutyaink.html*/
-/*A 2 táblázatra vonatkozó beállítások*/
-#tablazatok {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2cm;
-}
-#tablazatok th {
-    font-size: 20px;
-    padding-bottom: 20px;
-}
-/*Jobb oldali táblázat*/
-#kutyaktablazatJobb {
-    /*2 táblázat közötti távolság beállítása*/
-    /*csúnya, de működik*/
-    padding-left: 4cm;
-}
-#kutyaktablazatJobb .leiras {
-    text-align: right;
-}
-.leiras {
-    padding-left: 1cm;
-    padding-right: 1cm;
-    margin-right: 2cm;
-    font-size: 20px;
-    font-style: Verdana;
-}
-#kutyak i {
-    display: flex;
-    justify-content: center;
-
-    font-size: 25px;
-
-    margin-bottom: 40px;
-}
-#kutyak img {
-    width: 400px;
-}
-
-
 /*Border animáció*/
 @keyframes borderOnFocus {
     100% {
@@ -589,6 +548,82 @@ a:visited {
         margin-left: 20px;
         margin-right: 20px;
         width: 480px;
+    }
+} 
+
+
+/*kutyaink.html*/
+/*A 2 táblázatra vonatkozó beállítások*/
+#tablazatok {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2cm;
+}
+#tablazatok th {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+#kutyaktablazatJobb {
+    padding-left: 5%;
+}
+#kutyaktablazatJobb .leiras {
+    text-align: right;
+}
+.leiras {
+    font-size: 20px;
+}
+#kutyaktablazatBal .leiras {
+    padding-left: 1cm;
+}
+#kutyaktablazatJobb .leiras {
+    padding-right: 1cm;
+}
+#kutyak i {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 25px;
+
+    margin-bottom: 40px;
+}
+#kutyak img {
+    width: 400px;
+}
+
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+    #kutyak i {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #tablazatok {
+        display: block;
+    }
+    #kutyaktablazatJobb, #kutyaktablazatBal {
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    #kutyak img {
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #kutyak img {
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #tablazatok {
+        display: flex;
+    }
+    #kutyaktablazatJobb, #kutyaktablazatBal {
+        margin-bottom: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 } 
 
