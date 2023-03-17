@@ -596,11 +596,10 @@ a:visited {
 }
 
 /*rolunk.html*/
- #leirasrolunk {
+#rolunktable {
     margin-left: 2cm;
-    margin-right: 2cm;
+    margin-right: 2cm;;
 }
-
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
 
