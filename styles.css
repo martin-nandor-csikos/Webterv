@@ -211,7 +211,37 @@ a:visited {
 /*Header reszponzivitás*/
 /*Ha lesz rá türelmem, még megcsinálom*/
 @media only screen and (max-width: 600px) {
+    #indexHeader {
+        width: 100%;
+    }
 
+    #infoBar p {
+        font-size: 12px;
+    }
+
+    #infoBar div {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    #menuBar {
+        flex-wrap: wrap;
+        flex-direction: row;
+        box-sizing: border-box;
+        height: auto;
+    }
+    #menuBar a {
+        font-size: 12px;
+        width: 20%;
+        height: 20px;
+        border-left: 0.5px solid black;
+        border-right: 0.5px solid black;
+        border-top: 0.5px solid black;
+        border-bottom: 0.5px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media only screen and (min-width: 600px) {
     #indexHeader {
@@ -229,7 +259,7 @@ a:visited {
 
     #menuBar a {
         font-size: 12px;
-        width: 6.2%;
+        width: 10%;
         height: 20px;
         display: flex;
         align-items: center;
@@ -240,7 +270,7 @@ a:visited {
 @media only screen and (min-width: 768px) {
     #menuBar a {
         font-size: 14px;
-        width: 10%;
+        width: 12%;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -349,7 +379,34 @@ a:visited {
 /*Reszponzivitás*/
 /*Ha lesz rá türelmem, még megcsinálom*/
 @media only screen and (max-width: 600px) {
+    #introduction {
+        display: block;
+    }
 
+    #introduction video {
+        margin-left: 0px;
+        margin-right: 0px;
+
+        display: block;
+        margin: auto;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #introductionText {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        margin: auto;
+
+        width: 95%;
+    }
+
+    #introductionText p:last-of-type {
+        margin-bottom: 0px;
+        padding-bottom: 30px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #introduction {
@@ -362,8 +419,9 @@ a:visited {
 
         display: block;
         margin: auto;
+        box-sizing: border-box;
 
-        width: 600px;
+        width: 100%;
     }
 
     #introductionText {
