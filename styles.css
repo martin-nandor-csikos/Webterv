@@ -220,10 +220,18 @@ a:visited {
     }
 
     #infoBar div {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-
+    #closingHours p::before {
+        display: none;
+    }
+    #phoneNumber p::before {
+        display: none;
+    }
+    #location p::before {
+        display: none;
+    }
     #menuBar {
         flex-wrap: wrap;
         flex-direction: row;
@@ -577,16 +585,27 @@ a:visited {
 
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
-
+    #formInputs {
+        display: block;
+    }
+    #formInputs fieldset {
+        margin: auto;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    #personalInfo input {
+        width: 300px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #formInputs {
         display: block;
-}
+    }
 
     #formInputs fieldset {
         margin: auto;
         margin-bottom: 50px;
+        width: 100%;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -655,7 +674,22 @@ a:visited {
 
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
-
+    #kutyak i {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #tablazatok {
+        display: block;
+    }
+    #kutyaktablazatJobb, #kutyaktablazatBal {
+        margin: auto;
+        margin-left: 0px;
+        margin-bottom: 100px;
+        padding-left: 0px;
+    }
+    #kutyak img {
+        width: 200px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #kutyak i {
