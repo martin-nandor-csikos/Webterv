@@ -365,13 +365,13 @@ a:visited {
 
 
 /*Idézet szekció*/
-.quote {
+#quote {
     background-image: url('./img/quoteBg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.quote p {
+#quote p {
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -641,6 +641,9 @@ a:visited {
     justify-content: center;
     margin-bottom: 2cm;
 }
+#tablazatok img {
+    border: 1px solid black;
+}
 #tablazatok th {
     font-size: 20px;
     padding-bottom: 20px;
@@ -671,11 +674,6 @@ a:visited {
 }
 #kutyak img {
     width: 400px;
-}
-
-/*kapcsolat.html*/
-#contactform > label, input, textarea {
-    margin-left: 2cm;
 }
 
 /*Reszponzivitás*/
@@ -729,6 +727,73 @@ a:visited {
     }
 } 
 
+/*kapcsolat.html*/
+#contactform > label, input, textarea {
+    margin-left: 2cm;
+}
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
+} 
+
+
+/*Rólunk*/
+#aboutUsImage {
+    width: 800px;
+    clear: both;
+
+    display: block;
+    margin: auto;
+
+    margin-top: 50px;
+
+    transform: scale(1.5, 1);
+
+    border: 2px solid black;
+    border-radius: 25px;
+}
+#aboutUs p {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 22px;
+    line-height: 36px;
+}
+#aboutUs p::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+    #aboutUsImage {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #aboutUsImage {
+        width: 65%;
+        transform: scale(1.5, 1.5);
+    }
+}
+@media only screen and (min-width: 768px) {
+    #aboutUsImage {
+        transform: scale(1.5, 1);
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #aboutUsImage {
+        width: 45%;
+    }
+} 
 
 /*Nyomtatási stíluslap*/
 @media print {  
@@ -738,7 +803,7 @@ a:visited {
         color: #000;
     }
 
-    video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before {
+    video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
         display: none;
     }
 
@@ -749,7 +814,7 @@ a:visited {
         color: #000;
     }
 
-    body, a.active, #name, .quote, #inputButtons input {
+    body, a.active, #name, #quote, #inputButtons input {
         background-color: #fff;
         background-image: none;
     }
@@ -763,7 +828,7 @@ a:visited {
         margin: 0pt 0pt;
     }
 
-    .quote p {
+    #quote p {
         text-shadow: none;
         color: #000;
     }
