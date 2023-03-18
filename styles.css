@@ -11,6 +11,12 @@ a {
 a.active {
     background-color: #d4a373;
 }
+a:link {
+    color: black;
+}
+a:active {
+    color: black;
+}
 a:visited {
     color: black;
 
