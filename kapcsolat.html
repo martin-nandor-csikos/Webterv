@@ -37,7 +37,6 @@
         <!--Menu bar-->
         <nav id="menuBar">
             <a href="index.html" id="main" class="notActive">Főoldal</a>
-            <a href="rolunk.html" id="about" class="notActive">Rólunk</a>
             <a href="aboutUs.html" id="about" class="notActive">Rólunk</a>
             <a href="kutyaink.html" id="dogs" class="notActive">Kutyáink</a>
             <a href="webshop.html" id="webshop" class="notActive">Webshop</a>
@@ -45,28 +44,29 @@
             <a href="#" id="contacts" class="active">Kapcsolat</a>
         </nav>
     </header>
+
+    <img id="contactimage" src="img/kapcsolat.jpg" alt="Kapcsolat">
 	<h1 class="title">Kapcsolat</h1>
-    <p style="margin-left: 2cm; font-size: 30px;">Az alábbi form segítségével léphet kapcsolatba velünk.</p>
-    <table>
-        <tr>
-            <td>
-                <form method="post" id="contactform">
-                    <label>Név: </label><br>
-                    <input type="text" name="nev" required><br>
+    <p style="font-size: 30px; text-align: center; font-style: italic;">Az alábbi form segítségével léphet kapcsolatba velünk.</p>
 
-                    <label for="email">Email: </label><br>
-                    <input type="email" name="email" id="email" required><br>
+    <div id="contactform">
+        <form method="post">
 
-                    <label for="message">Üzenet: </label><br>
-                    <textarea name="message" id="message" required></textarea><br><br>
+            <fieldset id="contact">    
+                <label>Név: </label><br>
+                <input type="text" name="nev" required>
+                <br>
 
-                    <input id="submitbutton" type="submit" value="Küldés">
-                </form>
-            </td>
-            <td>
-                <img id="contactimage" src="img/kapcsolat.jpg" width="400px">
-            </td>
-        </tr>
-    </table>
+                <label for="email">Email: </label><br>
+                <input type="email" name="email" id="email" required><br>
+            
+                <label for="message">Üzenet: </label><br>
+                <textarea name="message" id="message" rows="10" cols="50" required></textarea><br><br>    
+            </fieldset>
+
+
+            <input id="submitbutton" type="submit" value="Küldés">
+        </form>
+    </div>
 </body>
 </html>
