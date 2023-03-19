@@ -784,23 +784,23 @@ a:visited {
     border: 1px solid black;
 }
 #tablazatok th {
-    font-size: 20px;
+    font-size: 25px;
     padding-bottom: 20px;
 }
-#kutyaktablazatJobb {
-    padding-left: 5%;
+#kutyaktablazat {
+    text-align: center;
 }
-#kutyaktablazatJobb .leiras {
-    text-align: right;
+#kutyaktablazat td {
+    width: 170px;
+
+    font-size: 18px;
 }
-.leiras {
-    font-size: 20px;
+#kutyaktablazat tr {
+    border: 1px solid black;
 }
-#kutyaktablazatBal .leiras {
-    padding-left: 1cm;
-}
-#kutyaktablazatJobb .leiras {
-    padding-right: 1cm;
+#kutyaktablazat td[headers="nev"] {
+    font-size: 30px;
+    font-weight: bold;
 }
 #kutyak i {
     display: flex;
@@ -834,15 +834,13 @@ a:visited {
     }
     #tablazatok {
         display: block;
+        overflow-x: auto;
     }
-    #kutyaktablazatJobb, #kutyaktablazatBal {
+    #kutyaktablazat {
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 100px;
         padding-left: 0px;
-    }
-    #kutyaktablazatJobb {
-        float: right;
     }
     #kutyak img {
         width: 200px;
@@ -855,10 +853,7 @@ a:visited {
     }
     #tablazatok {
         display: block;
-    }
-    #kutyaktablazatJobb, #kutyaktablazatBal {
-        margin: auto;
-        margin-bottom: 100px;
+        overflow-x: auto;
     }
     #kutyak img {
         width: 250px;
@@ -873,7 +868,7 @@ a:visited {
     #tablazatok {
         display: flex;
     }
-    #kutyaktablazatJobb, #kutyaktablazatBal {
+    #kutyaktablazat {
         margin-bottom: 100px;
         margin-left: 20px;
         margin-right: 20px;
