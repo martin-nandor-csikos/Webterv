@@ -815,7 +815,6 @@ a:visited {
     width: 400px;
 }
 
-<<<<<<< HEAD
 /*kapcsolat.html*/
 #contactform > label, input, textarea {
     margin-left: 2cm;
@@ -826,8 +825,7 @@ a:visited {
     margin-left: 2cm;
     margin-right: 2cm;;
 }
-=======
->>>>>>> da55d8070cbcecc89152e3876112abbf9c4326ae
+
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
     #kutyak i {

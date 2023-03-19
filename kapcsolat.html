@@ -46,18 +46,27 @@
         </nav>
     </header>
 	<h1 class="title">Kapcsolat</h1>
-	<p style="margin-left: 2cm;">Az alábbi form segítségével léphet kapcsolatba velünk.</p>
-	<form method="post" id="contactform">
-		<label>Név: </label><br>
-		<input type="text" name="nev" required><br>
+    <p style="margin-left: 2cm; font-size: 30px;">Az alábbi form segítségével léphet kapcsolatba velünk.</p>
+    <table>
+        <tr>
+            <td>
+                <form method="post" id="contactform">
+                    <label>Név: </label><br>
+                    <input type="text" name="nev" required><br>
 
-		<label for="email">Email: </label><br>
-		<input type="email" name="email" id="email" required><br>
+                    <label for="email">Email: </label><br>
+                    <input type="email" name="email" id="email" required><br>
 
-		<label for="message">Üzenet: </label><br>
-		<textarea name="message" id="message" required></textarea><br><br>
+                    <label for="message">Üzenet: </label><br>
+                    <textarea name="message" id="message" required></textarea><br><br>
 
-		<input type="submit" value="Küldés">
-	</form>
+                    <input id="submitbutton" type="submit" value="Küldés">
+                </form>
+            </td>
+            <td>
+                <img id="contactimage" src="img/kapcsolat.jpg" width="400px">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
