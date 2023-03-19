@@ -30,17 +30,13 @@ a:visited {
 }
 
 @keyframes bgColorOnHover {
-    from {}
-
-    to {
+    100% {
         background-color: #faedcd;
     }
 }
 
 @keyframes widthOnHover {
-    from {}
-
-    to {
+    100% {
         width: 20%;
     }
 }
@@ -552,7 +548,7 @@ a:visited {
 
 /*Személyes adatok*/
 #personalInfo input {
-    width: 450px;
+    width: 300px;
 }
 #personalInfo input:focus {
     animation: borderOnFocus 0.2s;
@@ -585,11 +581,14 @@ a:visited {
     margin-left: 20px;
     margin-right: 20px;
 
-    background-color: #faedcd;
+    background-color: #d4a373;
 
     font-size: 16px;
 
     cursor: pointer;
+}
+#inputButtons input:hover {
+    animation: bgColorOnHover 0.4s forwards;
 }
 
 /*Border animáció*/
@@ -809,17 +808,18 @@ a:visited {
 
 /*Nyomtatási stíluslap*/
 @media print {  
-    p, #introductionText strong, #introductionText #year, a, a:visited, #introductionText a[id="selfServiceLink"] {
+    p, #aboutUs p, #aboutUs p::first-letter, #introductionText strong, #introductionText #year, a, a:visited, #introductionText a[id="selfServiceLink"] {
         font-size: 12pt;
         text-shadow: none;
+        font-weight: normal;
         color: #000;
     }
 
-    video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
+    #menuBar, video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
         display: none;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, .title {
         page-break-after: avoid;
         font-size: 14pt;
         text-shadow: none;
