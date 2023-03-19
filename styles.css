@@ -164,8 +164,8 @@ a:visited {
     background-repeat: no-repeat;
 
     color: rgb(241, 241, 241);
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: black;
+    stroke-width: 0.4px;
+    stroke: black;
     
     text-shadow: 2px 2px 10px #000;
 }
@@ -377,8 +377,8 @@ a:visited {
     word-spacing: 2px;
 
     color: #fff;
-    -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: #000;
+    stroke-width: 0.4px;
+    stroke: #000;
 
     text-shadow: 2px 2px 10px #000;
 }
@@ -431,8 +431,8 @@ a:visited {
     align-items: center;
 
     color: #cc8947;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
+    stroke-width: 0.5px;
+    stroke: black;
 }
 #dataContent div {
     margin-left: 5%;
@@ -947,8 +947,9 @@ a:visited {
         color: #000;
     }
 
-    #menuBar, video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
+    #menuBar, #introduction2Text img, #data::before, video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
         display: none;
+        background-image: none;
     }
 
     h1, h2, h3, .title {
