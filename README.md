@@ -9,3 +9,5 @@ A weboldal áll 1db CSS állományból (styles.css), és 5db HTML fájlból. Az 
 www.adaptics.hu/
 
 https://rex.hu/
+
+www.lelenc.hu/
