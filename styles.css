@@ -11,6 +11,12 @@ a {
 a.active {
     background-color: #d4a373;
 }
+a:link {
+    color: black;
+}
+a:active {
+    color: black;
+}
 a:visited {
     color: black;
 
@@ -24,17 +30,13 @@ a:visited {
 }
 
 @keyframes bgColorOnHover {
-    from {}
-
-    to {
+    100% {
         background-color: #faedcd;
     }
 }
 
 @keyframes widthOnHover {
-    from {}
-
-    to {
+    100% {
         width: 20%;
     }
 }
@@ -211,7 +213,45 @@ a:visited {
 /*Header reszponzivitás*/
 /*Ha lesz rá türelmem, még megcsinálom*/
 @media only screen and (max-width: 600px) {
+    #indexHeader {
+        width: 100%;
+    }
 
+    #infoBar p {
+        font-size: 12px;
+    }
+
+    #infoBar div {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #closingHours p::before {
+        display: none;
+    }
+    #phoneNumber p::before {
+        display: none;
+    }
+    #location p::before {
+        display: none;
+    }
+    #menuBar {
+        flex-wrap: wrap;
+        flex-direction: row;
+        box-sizing: border-box;
+        height: auto;
+    }
+    #menuBar a {
+        font-size: 12px;
+        flex: 1;
+        height: 20px;
+        border-left: 0.5px solid black;
+        border-right: 0.5px solid black;
+        border-top: 0.5px solid black;
+        border-bottom: 0.5px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @media only screen and (min-width: 600px) {
     #indexHeader {
@@ -229,7 +269,7 @@ a:visited {
 
     #menuBar a {
         font-size: 12px;
-        width: 6.2%;
+        padding: 25px;
         height: 20px;
         display: flex;
         align-items: center;
@@ -240,7 +280,6 @@ a:visited {
 @media only screen and (min-width: 768px) {
     #menuBar a {
         font-size: 14px;
-        width: 10%;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -321,13 +360,13 @@ a:visited {
 
 
 /*Idézet szekció*/
-.quote {
+#quote {
     background-image: url('./img/quoteBg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.quote p {
+#quote p {
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -349,7 +388,34 @@ a:visited {
 /*Reszponzivitás*/
 /*Ha lesz rá türelmem, még megcsinálom*/
 @media only screen and (max-width: 600px) {
+    #introduction {
+        display: block;
+    }
 
+    #introduction video {
+        margin-left: 0px;
+        margin-right: 0px;
+
+        display: block;
+        margin: auto;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #introductionText {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        margin: auto;
+
+        width: 95%;
+    }
+
+    #introductionText p:last-of-type {
+        margin-bottom: 0px;
+        padding-bottom: 30px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #introduction {
@@ -362,8 +428,9 @@ a:visited {
 
         display: block;
         margin: auto;
+        box-sizing: border-box;
 
-        width: 600px;
+        width: 100%;
     }
 
     #introductionText {
@@ -446,6 +513,15 @@ a:visited {
     margin-bottom: 60px;
 }
 
+#selfServiceText {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
+}
+
 /*Teljes formra kiható*/
 #selfServiceForm {
     font-size: 18px;
@@ -472,7 +548,7 @@ a:visited {
 
 /*Személyes adatok*/
 #personalInfo input {
-    width: 450px;
+    width: 300px;
 }
 #personalInfo input:focus {
     animation: borderOnFocus 0.2s;
@@ -505,30 +581,46 @@ a:visited {
     margin-left: 20px;
     margin-right: 20px;
 
-    background-color: #faedcd;
+    background-color: #d4a373;
 
     font-size: 16px;
+
+    cursor: pointer;
+}
+#inputButtons input:hover {
+    animation: bgColorOnHover 0.4s forwards;
 }
 
 /*Border animáció*/
 @keyframes borderOnFocus {
     100% {
-        border: 2px solid rgb(206, 86, 0);
+        border: 2px solid #d4a373;
     }
 }
 
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
-
+    #formInputs {
+        display: block;
+    }
+    #formInputs fieldset {
+        margin: auto;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    #personalInfo input {
+        width: 300px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #formInputs {
         display: block;
-}
+    }
 
     #formInputs fieldset {
         margin: auto;
         margin-bottom: 50px;
+        width: 100%;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -541,12 +633,14 @@ a:visited {
         display: flex;
         justify-content: center;
     }
-
     #formInputs fieldset {
         margin: 0px;
         margin-left: 20px;
         margin-right: 20px;
         width: 480px;
+    }
+    #personalInfo input {
+        width: 300px;
     }
 } 
 
@@ -557,6 +651,9 @@ a:visited {
     display: flex;
     justify-content: center;
     margin-bottom: 2cm;
+}
+#tablazatok img {
+    border: 1px solid black;
 }
 #tablazatok th {
     font-size: 20px;
@@ -590,6 +687,7 @@ a:visited {
     width: 400px;
 }
 
+<<<<<<< HEAD
 /*kapcsolat.html*/
 #contactform > label, input, textarea {
     margin-left: 2cm;
@@ -600,9 +698,29 @@ a:visited {
     margin-left: 2cm;
     margin-right: 2cm;;
 }
+=======
+>>>>>>> da55d8070cbcecc89152e3876112abbf9c4326ae
 /*Reszponzivitás*/
 @media only screen and (max-width: 600px) {
-
+    #kutyak i {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #tablazatok {
+        display: block;
+    }
+    #kutyaktablazatJobb, #kutyaktablazatBal {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 100px;
+        padding-left: 0px;
+    }
+    #kutyaktablazatJobb {
+        float: right;
+    }
+    #kutyak img {
+        width: 200px;
+    }
 }
 @media only screen and (min-width: 600px) {
     #kutyak i {
@@ -636,27 +754,95 @@ a:visited {
     }
 } 
 
+/*kapcsolat.html*/
+#contactform > label, input, textarea {
+    margin-left: 2cm;
+}
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
+} 
+
+
+/*Rólunk*/
+#aboutUsImage {
+    width: 800px;
+    clear: both;
+
+    display: block;
+    margin: auto;
+
+    margin-top: 50px;
+
+    transform: scale(1.5, 1);
+
+    border: 2px solid black;
+    border-radius: 25px;
+}
+#aboutUs p {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 22px;
+    line-height: 36px;
+}
+#aboutUs p::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Reszponzivitás*/
+@media only screen and (max-width: 600px) {
+    #aboutUsImage {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #aboutUsImage {
+        width: 65%;
+        transform: scale(1.5, 1.5);
+    }
+}
+@media only screen and (min-width: 768px) {
+    #aboutUsImage {
+        transform: scale(1.5, 1);
+    }
+}
+@media only screen and (min-width: 1200px) {
+    #aboutUsImage {
+        width: 45%;
+    }
+} 
 
 /*Nyomtatási stíluslap*/
 @media print {  
-    p, #introductionText strong, #introductionText #year, a, a:visited, #introductionText a[id="selfServiceLink"] {
+    p, #aboutUs p, #aboutUs p::first-letter, #introductionText strong, #introductionText #year, a, a:visited, #introductionText a[id="selfServiceLink"] {
         font-size: 12pt;
         text-shadow: none;
+        font-weight: normal;
         color: #000;
     }
 
-    video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before {
+    #menuBar, video, audio, #closingHours p::before, #phoneNumber p::before, #location p::before, #aboutUsImage, #kutyaktablazatBal img, #kutyaktablazatJobb img {
         display: none;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, .title {
         page-break-after: avoid;
         font-size: 14pt;
         text-shadow: none;
         color: #000;
     }
 
-    body, a.active, #name, .quote, #inputButtons input {
+    body, a.active, #name, #quote, #inputButtons input {
         background-color: #fff;
         background-image: none;
     }
@@ -670,7 +856,7 @@ a:visited {
         margin: 0pt 0pt;
     }
 
-    .quote p {
+    #quote p {
         text-shadow: none;
         color: #000;
     }
