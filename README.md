@@ -10,4 +10,4 @@ www.adaptics.hu/
 
 https://rex.hu/
 
-https://www.lelenc.hu/
+www.lelenc.hu/
