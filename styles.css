@@ -164,8 +164,8 @@ a:visited {
     background-repeat: no-repeat;
 
     color: rgb(241, 241, 241);
-    stroke-width: 0.4px;
-    stroke: black;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
     
     text-shadow: 2px 2px 10px #000;
 }
@@ -377,8 +377,8 @@ a:visited {
     word-spacing: 2px;
 
     color: #fff;
-    stroke-width: 0.4px;
-    stroke: #000;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: #000;
 
     text-shadow: 2px 2px 10px #000;
 }
@@ -431,8 +431,8 @@ a:visited {
     align-items: center;
 
     color: #cc8947;
-    stroke-width: 0.5px;
-    stroke: black;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
 }
 #dataContent div {
     margin-left: 5%;
