@@ -1,0 +1,9 @@
+XAMPP-ot megnyitva, Apache és MySQL szerverek elindítása után MySQL mellett 'Admin' gomb
+-->
+felül a 'Server: 127.0.0.1' alatt, a 'Databases', 'SQL', 'Status' mellett jobbra, 'Import' gombra nyomás
+-->
+'Browse' gombra nyomás után a kutyamenhely.sql adatbázis megkeresése, betallózása
+-->
+alul az 'Import' gombra nyomás
+
+ezután balra az information_schema és hasonló dolgok alatt megjelenik a kutyamenhely adatbázis, a 'users' táblával, ami a regisztrált felhasználókat fogja tárolni
