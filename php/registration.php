@@ -7,12 +7,12 @@ connect();
 
 //A method=POST-os form inputjainak eltárolása egy változóban
 //Ezeket a változókat megtisztítjuk az egyéb nem oda illő karakterektől
-$email = trim($_POST["email"], " ");
-$fhnev = trim($_POST["fhnev"], " ");
-$jelszo = trim($_POST["jelszo"], " ");
-$veznev = trim($_POST["veznev"], " ");
-$kernev = trim($_POST["kernev"], " ");
-$szuldatum = filter_var(trim($_POST["szuldatum"], " "), FILTER_SANITIZE_EMAIL);
+$email = trim($_POST["email"]);
+$fhnev = trim($_POST["fhnev"]);
+$jelszo = trim($_POST["jelszo"]);
+$veznev = trim($_POST["veznev"]);
+$kernev = trim($_POST["kernev"]);
+$szuldatum = filter_var(trim($_POST["szuldatum"]), FILTER_SANITIZE_EMAIL);
 $nem = $_POST["nem"];
 
 $hibak[] = "";

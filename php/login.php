@@ -2,17 +2,25 @@
 require "databaseConnection.php";
 connect();
 
-$fhnev = $_POST['fhnev'];
-$jelszo = $_POST['jelszo'];
+//formon belül elküldött felhasználónév és jelszó, azok megtisztítása
+$fhnev = trim($_POST['fhnev']);
+$jelszo = trim($_POST['jelszo']);
 
+//ha a 2 input ki lett töltve
 if (isset($fhnev) && isset($jelszo)) {
-    $sqlQuery = "SELECT * FROM users";
+    //SQL utasítás, ahol megnézzük
+    $sqlQuery = "SELECT fhnev, jelszo FROM users";
+    $eredmeny = $csatlakozas->query($sqlQuery);
 
-    foreach ($sqlQuery as $felhasznalo) {
-        if ($felhasznalo == $fhnev && password_verify($jelszo, $felhasznalo['jelszo'])) {
-            //Átirányítás
-            break;
+    //Ha az utasítás miatt az eredmeny változóban van elérhető sor (= van olyan felhasználónév, ami megegyezik a formon belüli adattal)
+    if ($eredmeny->num_rows > 0) {
+        while($user = $eredmeny->fetch_assoc()) {
+            if (password_verify($jelszo, $user['jelszo'])) {
+                //Átirányítás a bejelentkezett oldalra
+            }
         }
+    } else {
+        //Hibás felhasználónév
     }
 }
 
