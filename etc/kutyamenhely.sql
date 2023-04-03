@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2023 at 10:49 AM
+-- Generation Time: Apr 03, 2023 at 03:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `kutyamenhely`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `private_messages`
+--
+
+CREATE TABLE `private_messages` (
+  `id` int(11) NOT NULL COMMENT 'Primary kulcs',
+  `sentTo` varchar(255) NOT NULL COMMENT 'Kinek küldték az üzenetet',
+  `sentFrom` varchar(255) NOT NULL COMMENT 'Ki küldte az üzenetet',
+  `message` text NOT NULL COMMENT 'Üzenet',
+  `datetime` datetime NOT NULL DEFAULT current_timestamp() COMMENT 'Idő, amikor el lett küldve az üzenet'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Felhasználók privát üzenetei';
+
+--
+-- Dumping data for table `private_messages`
+--
+
+INSERT INTO `private_messages` (`id`, `sentTo`, `sentFrom`, `message`, `datetime`) VALUES
+(1, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:08'),
+(2, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:26'),
+(3, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:27'),
+(4, 'DavidxHUN', 'jeno1', 'helo', '2023-04-03 15:44:08');
 
 -- --------------------------------------------------------
 
@@ -56,6 +80,12 @@ INSERT INTO `users` (`id`, `jogosultsag`, `email`, `fhnev`, `jelszo`, `veznev`, 
 --
 
 --
+-- Indexes for table `private_messages`
+--
+ALTER TABLE `private_messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -66,6 +96,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `private_messages`
+--
+ALTER TABLE `private_messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

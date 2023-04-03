@@ -1,5 +1,11 @@
 XAMPP-ot megnyitva, Apache és MySQL szerverek elindítása után MySQL mellett 'Admin' gomb
 -->
+bal oldalt a phpMyAdmin felirat alatt, information_schema szöveg felett a New gombra nyomás
+-->
+Database name legyen 'kutyamenhely', és 'utf8mb4_general_ci' helyett legyen 'utf8_hungarian_ci'
+-->
+Create gombra nyomás
+-->
 felül a 'Server: 127.0.0.1' alatt, a 'Databases', 'SQL', 'Status' mellett jobbra, 'Import' gombra nyomás
 -->
 'Browse' gombra nyomás után a kutyamenhely.sql adatbázis megkeresése, betallózása
