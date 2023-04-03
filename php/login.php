@@ -1,5 +1,6 @@
 <?php
 require "databaseConnection.php";
+require "session.php";
 connect();
 
 //formon belül elküldött felhasználónév és jelszó, azok megtisztítása
@@ -19,6 +20,7 @@ if (isset($fhnev) && isset($jelszo)) {
             if (password_verify($jelszo, $user['jelszo'])) {
                 //Átirányítás a bejelentkezett oldalra
                 //header("Location: asd.php");
+                startSession($fhnev);
             } else {
                 echo "Hibás jelszó.";
             }
