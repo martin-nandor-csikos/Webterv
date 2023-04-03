@@ -90,7 +90,6 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && iss
         foreach ($hibak as $hiba) {
             echo $hiba . "<br>";
         }
-        echo "asd";
     }
 }
 
