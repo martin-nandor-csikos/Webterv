@@ -10,21 +10,23 @@ connect();
 $email = trim($_POST["email"]);
 $fhnev = trim($_POST["fhnev"]);
 $jelszo = trim($_POST["jelszo"]);
+$jelszoIsm = trim($_POST["jelszoIsm"]);
 $veznev = trim($_POST["veznev"]);
 $kernev = trim($_POST["kernev"]);
 $szuldatum = filter_var(trim($_POST["szuldatum"]), FILTER_SANITIZE_EMAIL);
 $nem = $_POST["nem"];
 
-$hibak[] = "";
+$hibak = [];
 
 
 //Ha a formon belül minden inputba került adat
-if (isset($email) && isset($fhnev) && isset($jelszo) && isset($veznev) && isset($kernev) && isset($szuldatum) && isset($nem)) {
+if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && isset($veznev) && isset($kernev) && isset($szuldatum) && isset($nem)) {
     //Jelszó hashelése --> biztonsági okok miatt
     //$jelszo a formon belül megadott jelszó, PASSWORD_DEFAULT a hashelés metódusa
     $hasheltJelszo = password_hash($jelszo, PASSWORD_DEFAULT);
 
 
+    //Adatok validálása
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $hibak[] = "Hibás e-mail formátum.";
     }
@@ -37,6 +39,9 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($veznev) && isset(
     if (strlen($jelszo) < 6 || strlen($jelszo) > 255) {
         $hibak[] = "Túl hosszú vagy rövid a jelszó. Minimum 6, maximum 255 karakterből kell állnia.";
     }
+    if ($jelszo != $jelszoIsm) {
+        $hibak[] = "A megadott 2 jelszó nem egyezik meg.";
+    }
     if (strlen($veznev) < 2 || strlen($veznev) > 255) {
         $hibak[] = "Túl hosszú vagy rövid a keresztnév. Minimum 2, maximum 255 karakterből kell állnia.";
     }
@@ -46,30 +51,46 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($veznev) && isset(
     if (!datumValidalas($szuldatum)) {
         $hibak[] = "Hibás dátum formátum. Helyes formátum: YYYY.MM.DD";
     }
-    if ($nem != "ferfi" || $nem != "no" || $nem != "egyeb") {
+    if ($nem != "ferfi" && $nem != "no" && $nem != "egyeb") {
         $hibak[] = "Hibás nem. Az érték csak férfi, nő, vagy egyéb lehet.";
+    }
+
+    //Email cím és felhasználónév elérhetőségének vizsgálata
+    $emailElerheto = "SELECT email FROM users WHERE email='$email'";
+    $fhnevElerheto = "SELECT fhnev FROM users WHERE fhnev='$fhnev'";
+    $emailQuery = $csatlakozas->query($emailElerheto);
+    $fhnevQuery = $csatlakozas->query($fhnevElerheto);
+
+    //Ha az utasítás miatt több sort kaptunk vissza (= van már olyan email cím vagy jelszó)
+    if ($emailQuery->num_rows > 0) {
+        $hibak[] = "Az e-mail cím foglalt.";
+    }
+    if ($fhnevQuery->num_rows > 0) {
+        $hibak[] = "A felhasználónév foglalt.";
     }
 
 
     //Ha nincs semmilyen hiba
-    if (empty($hibak)) {
+    if (count($hibak) === 0) {
         //SQL adatbázisba, a users táblába bekerülnek az adatok
         //Query = utasítás
         //(email, fhnev, jelszo...) --> az email, fhnev, jelszo...sorokba kerülnek az értékek
         //VALUES ($email, $fhnev...) --> a formban megadott adatok
-        $sqlQuery = "INSERT INTO users (email, fhnev, jelszo, veznev, kernev, szuldatum, nem) VALUES ($email, $fhnev, $hasheltJelszo, $veznev, $kernev, $szuldatum, $nem)";
+        $sqlQuery = "INSERT INTO users (email, fhnev, jelszo, veznev, kernev, szuldatum, nem) VALUES ('$email', '$fhnev', '$hasheltJelszo', '$veznev', '$kernev', '$szuldatum', '$nem')";
 
         //Ha sikerült elvégezni az utasítást (bekerültek az adatok a táblába)
         if ($csatlakozas->query($sqlQuery) === TRUE) {
-            //Átirányítás a bejelentkezett oldalra
+            //Átirányítás a bejelentkezési oldalra
+            //header("Location: asd.php");
         } else {
             echo "Hiba: " . $sqlQuery . "<br>" . $csatlakozas->error;
         }
     } else {
         //Végigmegyünk a hibákon, és kiiratjuk
         foreach ($hibak as $hiba) {
-            echo $hiba;
+            echo $hiba . "<br>";
         }
+        echo "asd";
     }
 }
 
