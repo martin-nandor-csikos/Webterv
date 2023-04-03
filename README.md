@@ -13,3 +13,8 @@ www.adaptics.hu/
 https://rex.hu/
 
 www.lelenc.hu/
+
+## Backend
+A weboldalhoz tartozó PHP kódok az /php/ mappában találhatóak.
+
+A MySQL exportált adatbázis (kutyamenhely) az /etc/ mappában található, kutyamenhely.sql néven.
