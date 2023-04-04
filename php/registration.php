@@ -1,19 +1,20 @@
 <?php
 //databaseConnection.php importálása
 require "databaseConnection.php";
+require "dateValidation.php";
 
 //connect függvény meghívása a databaseConnection-ből
 connect();
 
 //A method=POST-os form inputjainak eltárolása egy változóban
 //Ezeket a változókat megtisztítjuk az egyéb nem oda illő karakterektől
-$email = trim($_POST["email"]);
+$email = filter_var(trim($_POST["email"], FILTER_SANITIZE_EMAIL));
 $fhnev = trim($_POST["fhnev"]);
 $jelszo = trim($_POST["jelszo"]);
 $jelszoIsm = trim($_POST["jelszoIsm"]);
 $veznev = trim($_POST["veznev"]);
 $kernev = trim($_POST["kernev"]);
-$szuldatum = filter_var(trim($_POST["szuldatum"]), FILTER_SANITIZE_EMAIL);
+$szuldatum = trim($_POST["szuldatum"]);
 $nem = $_POST["nem"];
 
 $hibak = [];
@@ -43,10 +44,10 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && iss
         $hibak[] = "A megadott 2 jelszó nem egyezik meg.";
     }
     if (strlen($veznev) < 2 || strlen($veznev) > 255) {
-        $hibak[] = "Túl hosszú vagy rövid a keresztnév. Minimum 2, maximum 255 karakterből kell állnia.";
+        $hibak[] = "Túl hosszú vagy rövid a vezetéknév. Minimum 2, maximum 255 karakterből kell állnia.";
     }
     if (strlen($kernev) < 2 || strlen($kernev) > 255) {
-        $hibak[] = "Túl hosszú vagy rövid a vezetéknév. Minimum 2, maximum 255 karakterből kell állnia.";
+        $hibak[] = "Túl hosszú vagy rövid a keresztnév. Minimum 2, maximum 255 karakterből kell állnia.";
     }
     if (!datumValidalas($szuldatum)) {
         $hibak[] = "Hibás dátum formátum. Helyes formátum: YYYY.MM.DD";
@@ -95,13 +96,4 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && iss
 
 //Adatbázis csatlakozásának megszüntetése
 disconnect();
-
-//A születési dátum validálására szolgáló function
-function datumValidalas ($datum, $format = 'Y.m.d') {
-    //$d változóban létrehozunk egy formátumot
-    $d = DateTime::createFromFormat($format, $datum);
-
-    //ha a létrehozott formátum az megegyezik az átadott dátum formátumával, akkor igaz lesz, ha nem, hamis
-    return $d && $d->format($format) === $datum;
-}
 ?>
