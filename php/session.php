@@ -1,10 +1,10 @@
 <?php
-//TESZTELNI KELL A FUNCTIONÖKET
-
 //Session elindítása
-function startSession($fhnev) {
+function startSession() {
     session_start();
+}
 
+function setSessionData($fhnev) {
     //User felhasználónevének eltárolása
     $_SESSION['fhnev'] = $fhnev;
 }
@@ -20,7 +20,7 @@ function checkSession() {
     //Ha nincs beállítva a sessionben a felhasználónév (= nincs elindított session)
     if (!isset($_SESSION['fhnev'])) {
         //Átirányítás a bejelentkező oldalra
-        echo "Nem vagy bejelentkezve.";
+        header("Location: ./loginPage.php");
     }
 }
 ?>
