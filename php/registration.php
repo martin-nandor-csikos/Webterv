@@ -82,7 +82,7 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && iss
         //Ha sikerült elvégezni az utasítást (bekerültek az adatok a táblába)
         if ($csatlakozas->query($sqlQuery) === TRUE) {
             //Átirányítás a bejelentkezési oldalra
-            //header("Location: asd.php");
+            header("Location: ./../loginPage.php");
         } else {
             echo "Hiba: " . $sqlQuery . "<br>" . $csatlakozas->error;
         }
