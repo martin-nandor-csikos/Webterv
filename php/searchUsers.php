@@ -3,10 +3,10 @@ require "databaseConnection.php";
 connect();
 
 //Kereső input értéke
-$kereses = $_GET['kereses'];
+$fhnev = $_GET['fhnev'];
 
 //Megkeressük azokat a felhasználóneveket, amik tartalmazzák a $kereses változót, és a jogosultsága nem admin
-$sqlQuery = "SELECT fhnev FROM users WHERE fhnev LIKE '%$kereses%' AND jogosultsag <> 'admin'";
+$sqlQuery = "SELECT fhnev FROM users WHERE fhnev LIKE '%$fhnev%' AND jogosultsag <> 'admin'";
 $eredmeny = $csatlakozas->query($sqlQuery);
 
 //Ha van eredmény
