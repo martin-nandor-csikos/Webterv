@@ -1,6 +1,6 @@
 <?php
 //A születési dátum validálására szolgáló function
-function datumValidalas ($datum, $format = 'Y.m.d') {
+function datumValidalas ($datum, $format = 'Y-m-d') {
     //$d változóban létrehozunk egy formátumot
     $d = DateTime::createFromFormat($format, $datum);
 
