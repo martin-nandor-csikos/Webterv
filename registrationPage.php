@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require "./php/registration.php";
-}
-?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
