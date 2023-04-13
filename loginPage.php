@@ -32,7 +32,7 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a href="searchUsersPage.php" id="search" class = "notActive">Felhasználók keresése</a>
+            <a href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
             <a href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
             <a href="registrationPage.php" id="registration" class="notActive">Regisztráció</a>
             <a href="#" id="login" class="active">Bejelentkezés</a>
