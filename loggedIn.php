@@ -48,9 +48,6 @@
     </header>
     <form action="./php/logout.php" method="POST">
         <input type="submit" name="kijelentkezes" value="Kijelentkezés">
-        <?php
-            stopSession();
-        ?>
     </form>
 </body>
 </html>
