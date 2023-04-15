@@ -47,12 +47,12 @@
             <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
         </nav>
     </header>
-    <form action="./php/searchUsers.php" method="GET">
-        <label for="fhnev">Felhasználónév</label>
+    <form id="keresesform" action="./php/searchUsers.php" method="GET">
+        <label id="kereseslabel" for="fhnev">Felhasználónév</label>
         <br>
-        <input type="text" name="fhnev" maxlength="255" minlength="3">
+        <input id="keresesmezo" type="text" name="fhnev" maxlength="255" minlength="3">
 
-        <input type="submit" value="Keresés">
+        <input type="submit" value="Keresés" id="keresesgomb">
     </form>
     
 </body>
