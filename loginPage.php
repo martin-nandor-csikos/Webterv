@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejelentkezés</title>
     <link rel="stylesheet" href="styles.css">
+
+    <?php
+        require "./php/session.php";
+        startSession();
+        checkIfLoggedIn();
+    ?>
 </head>
 <body>
 <header id="indexHeader">
@@ -32,13 +38,9 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a href="forum.html" id="forumpage" class="notActive">Fórum</a>
-            <a href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
-            <a href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
-            <a href="registrationPage.php" id="registration" class="notActive">Regisztráció</a>
-            <a href="#" id="login" class="active">Bejelentkezés</a>
-            <a href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
-            <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="registrationPage.php" id="registration" class="notActive">Regisztráció</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="#" id="login" class="active">Bejelentkezés</a>
         </nav>
     </header>
     <form id="loginform" action="./php/login.php" method="POST">
@@ -54,5 +56,6 @@
         <input type="submit" name="bejelentkezes" value="Bejelentkezés">
     </form>
     
+    <button id="reggomb"><a href="./registrationPage.php">Nincs még fiókod?</a></button>
 </body>
 </html>

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regisztráció</title>
     <link rel="stylesheet" href="styles.css">
+
+    <?php
+        require "./php/session.php";
+        startSession();
+        checkIfLoggedIn();
+    ?>
 </head>
 <body>
     <header id="indexHeader">
@@ -32,13 +38,9 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a href="forum.html" id="forumpage" class="notActive">Fórum</a>
-            <a href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
-            <a href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
-            <a href="#" id="registration" class="active">Regisztráció</a>
-            <a href="loginPage.php" id="login" class="notActive">Bejelentkezés</a>
-            <a href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
-            <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="#" id="registration" class="active">Regisztráció</a>
+            <a style="padding-left: 150px; padding-right: 150px;" href="loginPage.php" id="login" class="notActive">Bejelentkezés</a>
         </nav>
     </header>
     <form id="registrationform" action="./php/registration.php" method="POST">
@@ -79,7 +81,7 @@
 
         <label class="labels" for="nem">Nem</label>
         <br>
-        <ul>
+        <ul style="list-style-type: none">
             <li>
                 <input class="radio" type="radio" name="nem" value="ferfi">
                 <label class="labels" for="nem">Férfi</label>

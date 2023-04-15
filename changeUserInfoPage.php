@@ -38,13 +38,11 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a href="forum.html" id="forumpage" class="notActive">Fórum</a>
-            <a href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
-            <a href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
-            <a href="registrationPage.php" id="registration" class="notActive">Regisztráció</a>
-            <a href="loginPage.php" id="login" class="notActive">Bejelentkezés</a>
-            <a href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
-            <a href="#" id="changeinfo" class="active">Profil módosítása</a>
+        <a style="padding-left: 60px; padding-right: 60px;" href="forum.html" id="forumpage" class="notActive">Fórum</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="changeinfo" class="active">Profil módosítása</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
         </nav>
     </header>
     <form id="changeinfoform" action="./php/changeUserInfo.php" method="POST">

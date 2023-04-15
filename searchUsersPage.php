@@ -59,13 +59,11 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a href="forum.html" id="forumpage" class="notActive">Fórum</a>
-            <a href="#" id="search" class="active">Felhasználók keresése</a>
-            <a href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
-            <a href="registrationPage.php" id="registration" class="notActive">Regisztráció</a>
-            <a href="loginPage.php" id="login" class="notActive">Bejelentkezés</a>
-            <a href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
-            <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="forum.html" id="forumpage" class="notActive">Fórum</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="search" class="active">Felhasználók keresése</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
         </nav>
     </header>
     <form id="keresesform" action="./php/searchUsers.php" method="GET">
