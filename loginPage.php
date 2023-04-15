@@ -41,16 +41,16 @@
             <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
         </nav>
     </header>
-    <form action="./php/login.php" method="POST">
-        <label for="fhnev">Felhasználónév:</label>
+    <form id="loginform" action="./php/login.php" method="POST">
+        <label class="labels" for="fhnev">Felhasználónév:</label>
         <br>
-        <input type="text" name="fhnev" maxlength="255" minlength="2" required>
+        <input class="szoveges" type="text" name="fhnev" maxlength="255" minlength="2" required>
         <br><br>
 
-        <label for="jelszo">Jelszó:</label>
+        <label class="labels" for="jelszo">Jelszó:</label>
         <br>
-        <input type="password" name="jelszo" maxlength="255" minlength="6" required>
-
+        <input class="szoveges" type="password" name="jelszo" maxlength="255" minlength="6" required>
+        <br>
         <input type="submit" name="bejelentkezes" value="Bejelentkezés">
     </form>
     
