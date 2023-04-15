@@ -11,12 +11,15 @@ $eredmeny = $csatlakozas->query($sqlQuery);
 
 //Ha van eredmény
 if ($eredmeny->num_rows > 0) {
-    //Kiiratjuk a user felhasználónevét
+    $output = ""; 
+
     while ($user = $eredmeny->fetch_assoc()) {
-        echo $user['fhnev'] . "<br><br>";
+        $output .= "<p>" . $user['fhnev'] . "</p>";
     }
+
+    echo $output;
 } else {
-    echo "Nincs találat.";
+    echo "<p>Nincs találat.</p>";
 }
 
 disconnect();
