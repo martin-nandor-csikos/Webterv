@@ -47,8 +47,9 @@
             <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
         </nav>
     </header>
+    <p id="kijszoveg">Máris távozol?</p>
     <form action="./php/logout.php" method="POST">
-        <input type="submit" name="kijelentkezes" value="Kijelentkezés">
+        <input id="kijgomb" type="submit" name="kijelentkezes" value="Kijelentkezés">
     </form>
 </body>
 </html>
