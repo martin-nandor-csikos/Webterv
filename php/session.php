@@ -23,4 +23,11 @@ function checkSession() {
         header("Location: ./loginPage.php");
     }
 }
+
+function checkIfLoggedIn() {
+    if (isset($_SESSION['fhnev'])) {
+        //Átirányítás a bejelentkező oldalra
+        header("Location: ./loggedIn.php");
+    }   
+}
 ?>
