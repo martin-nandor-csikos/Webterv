@@ -12,27 +12,26 @@
         startSession();
         checkSession();
     ?>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
     <script>
         $(document).ready(function() {
-        $('#keresesform').submit(function(event) {
-            event.preventDefault();
+            $('#keresesform').submit(function(event) {
+                event.preventDefault();
 
-            var formData = $(this).serialize();
+                var formData = $(this).serialize();
 
-            $.ajax({
-            type: 'GET',
-            url: './php/searchUsers.php',
-            data: formData,
-            success: function(response) {
-                $('#searchResults').html(response);
-            }
+                $.ajax({
+                type: 'GET',
+                url: './php/searchUsers.php',
+                data: formData,
+                success: function(response) {
+                    $('#searchResults').html(response);
+                }
+                });
             });
         });
-        });
     </script>
-
 </head>
 
 <body>
