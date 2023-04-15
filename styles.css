@@ -1026,7 +1026,7 @@ a:visited {
 /*searchUsersPage.php*/
 #keresesform {
     max-width: 500px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -1053,7 +1053,7 @@ a:visited {
     border: 1px solid #ccc;
     border-radius: 3px;
     width: calc(100% - 70px);
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
 
 #keresesgomb {
@@ -1061,10 +1061,26 @@ a:visited {
 
     margin-left: 20px;
     margin-right: 20px;
-
     background-color: #d4a373;
-
     font-size: 16px;
+    cursor: pointer;
+}
 
+#searchResults {
+    margin-top: 20px; 
+    margin-left: 50px;
+    padding: 10px; 
+    background-color: #f9f9f9; 
+}
+
+.usernames {
+    font-size: 18px; 
+    font-style: oblique;
+    color: black; 
+    margin-bottom: 8px;
+}
+
+.usernames:hover {
+    color: #d4a373; 
     cursor: pointer;
 }

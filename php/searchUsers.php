@@ -14,7 +14,7 @@ if ($eredmeny->num_rows > 0) {
     $output = ""; 
 
     while ($user = $eredmeny->fetch_assoc()) {
-        $output .= "<p>" . $user['fhnev'] . "</p>";
+        $output .= "<p class=\"usernames\">" . $user['fhnev'] . "</p>";
     }
 
     echo $output;
