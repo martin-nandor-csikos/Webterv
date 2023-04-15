@@ -1127,6 +1127,18 @@ input[type="submit"] {
     border-radius: 3px;
     border: 1px solid #000;
 }
+#reggomb {
+    background-color: #d4a373;
+    color: #000;
+    padding: 10px;
+    margin: 30px auto 10px auto;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #000;
+
+    margin: auto;
+    display: block;
+}
 
 input[type="submit"]:hover {
     background-color: #c77d33;
