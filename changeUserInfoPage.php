@@ -47,56 +47,56 @@
             <a href="#" id="changeinfo" class="active">Profil módosítása</a>
         </nav>
     </header>
-    <form action="./php/changeUserInfo.php" method="POST">
-        <label for="ujEmail">Új e-mail</label>
+    <form id="changeinfoform" action="./php/changeUserInfo.php" method="POST">
+        <label class="labels" for="ujEmail">Új e-mail</label>
         <br>
-        <input type="email" name="ujEmail" maxlength="255">
+        <input class="szoveges" type="email" name="ujEmail" maxlength="255">
         <br><br>
 
-        <label for="ujFhnev">Új felhasználónév:</label>
+        <label class="labels" for="ujFhnev">Új felhasználónév:</label>
         <br>
-        <input type="text" name="ujFhnev" maxlength="255" minlength="3">
+        <input class="szoveges" type="text" name="ujFhnev" maxlength="255" minlength="3">
         <br><br>
 
-        <label for="ujVeznev">Új vezetéknév</label>
+        <label class="labels" for="ujVeznev">Új vezetéknév</label>
         <br>
-        <input type="text" name="ujVeznev" maxlength="255" minlength="2">
+        <input class="szoveges" type="text" name="ujVeznev" maxlength="255" minlength="2">
         <br><br>
 
-        <label for="ujKernev">Új keresztnév</label>
+        <label class="labels" for="ujKernev">Új keresztnév</label>
         <br>
-        <input type="text" name="ujKernev" maxlength="255" minlength="2">
+        <input class="szoveges" type="text" name="ujKernev" maxlength="255" minlength="2">
         <br><br>
 
-        <label for="ujJelszo">Új jelszó</label>
+        <label class="labels" for="ujJelszo">Új jelszó</label>
         <br>
-        <input type="password" name="ujJelszo" maxlength="255" minlength="6">
+        <input class="szoveges" type="password" name="ujJelszo" maxlength="255" minlength="6">
         <br><br>
 
-        <label for="ujJelszoIsm">Új jelszó ismét</label>
+        <label class="labels" for="ujJelszoIsm">Új jelszó ismét</label>
         <br>
-        <input type="password" name="ujJelszoIsm" maxlength="255" minlength="6">
+        <input class="szoveges" type="password" name="ujJelszoIsm" maxlength="255" minlength="6">
         <br><br>
 
-        <label for="ujSzuldatum">Új szuletési dátum</label>
+        <label class="labels" for="ujSzuldatum">Új szuletési dátum</label>
         <br>
         <input type="date" name="ujSzuldatum">
         <br><br>
 
-        <label for="ujNem">Új nem</label>
+        <label class="labels" for="ujNem">Új nem</label>
         <br>
         <ul>
             <li>
-                <input type="radio" name="ujNem" value="ferfi">
-                <label for="ujNem">Férfi</label>
+                <input class="radio" type="radio" name="ujNem" value="ferfi">
+                <label class="labels" for="ujNem">Férfi</label>
             </li>
             <li>
-                <input type="radio" name="ujNem" value="no">
-                <label for="ujNem">Nő</label>
+                <input class="radio" type="radio" name="ujNem" value="no">
+                <label class="labels" for="ujNem">Nő</label>
             </li>
             <li>
-                <input type="radio" name="ujNem" value="egyeb">
-                <label for="ujNem">Egyéb</label>
+                <input class="radio" type="radio" name="ujNem" value="egyeb">
+                <label class="labels" for="ujNem">Egyéb</label>
             </li>
         </ul>
 
