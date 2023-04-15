@@ -41,7 +41,7 @@
             <a href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
         </nav>
     </header>
-    <form action="./php/registration.php" method="POST">
+    <form id="registrationform" action="./php/registration.php" method="POST">
         <label for="email">E-mail</label>
         <br>
         <input type="email" name="email" maxlength="255">
