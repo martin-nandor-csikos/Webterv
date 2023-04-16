@@ -19,7 +19,7 @@ if (isset($fhnev) && isset($jelszo)) {
         while($user = $eredmeny->fetch_assoc()) {
             if (password_verify($jelszo, $user['jelszo'])) {
                 //Átirányítás a bejelentkezett oldalra
-                header("Location: ./../loggedIn.php");
+                header("Location: ./../hirek.php");
                 startSession();
                 setSessionData($fhnev);
             } else {

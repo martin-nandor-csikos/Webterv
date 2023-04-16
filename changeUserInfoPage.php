@@ -38,11 +38,16 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-        <a style="padding-left: 60px; padding-right: 60px;" href="forum.html" id="forumpage" class="notActive">Fórum</a>
+        <a style="padding-left: 60px; padding-right: 60px;" href="hirek.php" id="forumpage" class="notActive">Hírek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="#" id="changeinfo" class="active">Profil módosítása</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="loggedIn.php" id="logout" class="notActive">Kijelentkezés</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="logoutPage.php" id="logout" class="notActive">Kijelentkezés</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
+            <?php
+            if ($_SESSION['fhnev'] == "admin") {
+                echo "<a style='padding-left: 60px; padding-right: 60px;' href='adminPage.php' id='adminPage' class='notActive'>Admin felület</a>";
+            }
+            ?>
         </nav>
     </header>
     <form id="changeinfoform" action="./php/changeUserInfo.php" method="POST">

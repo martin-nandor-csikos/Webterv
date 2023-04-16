@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felhasználó keresés</title>
+    <title>Bejelentkezett</title>
     <link rel="stylesheet" href="styles.css">
 
     <?php
@@ -12,28 +12,7 @@
         startSession();
         checkSession();
     ?>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#keresesform').submit(function(event) {
-                event.preventDefault();
-
-                var formData = $(this).serialize();
-
-                $.ajax({
-                type: 'GET',
-                url: './php/searchUsers.php',
-                data: formData,
-                success: function(response) {
-                    $('#searchResults').html(response);
-                }
-                });
-            });
-        });
-    </script>
 </head>
-
 <body>
     <header id="indexHeader">
         <!--Small info bar-->
@@ -59,10 +38,10 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-            <a style="padding-left: 60px; padding-right: 60px;" href="hirek.php" id="forumpage" class="notActive">Hírek</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="search" class="active">Felhasználók keresése</a>
+        <a style="padding-left: 60px; padding-right: 60px;" href="hirek.php" id="forumpage" class="notActive">Hírek</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="logoutPage.php" id="logout" class="notActive">Kijelentkezés</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="logout" class="active">Kijelentkezés</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
             <?php
             if ($_SESSION['fhnev'] == "admin") {
@@ -71,14 +50,9 @@
             ?>
         </nav>
     </header>
-    <form id="keresesform" action="./php/searchUsers.php" method="GET">
-        <label id="kereseslabel" for="fhnev">Felhasználónév</label>
-        <br>
-        <input id="keresesmezo" type="text" name="fhnev" maxlength="255" minlength="3">
-
-        <input id="keresesgomb" type="submit" value="Keresés">
+    <p id="kijszoveg">Máris távozol?</p>
+    <form action="./php/logout.php" method="POST">
+        <input id="kijgomb" type="submit" name="kijelentkezes" value="Kijelentkezés">
     </form>
-    <div id="searchResults"></div>
-    
 </body>
 </html>
