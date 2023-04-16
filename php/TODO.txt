@@ -1,4 +1,0 @@
-+ Saját adatlap (visibility beállításokkal --> privát/publikus)
-+ Mások adatlapjának megtekintése
-+ Admin jogosultság (rendelések törlése, felhasználók letiltása)
-+ Fiók törlés
