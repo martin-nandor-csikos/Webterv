@@ -15,15 +15,15 @@ if ($eredmeny->num_rows > 0) {
         echo "<p class=\"usernames\">" . $adat['fhnev'] . "</p>";
         
         if ($adat['bio'] != "") {
-            echo "<p>Bio:<br>" . $adat['bio'] . "</p>";
-        }
-
-        if ($adat['kernev_publikus'] == 1) {
-            echo "<p>Keresztnév: " . $adat['kernev'] . "</p>"; 
+            echo "<p>Bio:<br>\"" . $adat['bio'] . "\"</p>";
         }
 
         if ($adat['veznev_publikus'] == 1) {
             echo "<p>Vezetéknév: ". $adat['veznev'] . "</p>"; 
+        }
+
+        if ($adat['kernev_publikus'] == 1) {
+            echo "<p>Keresztnév: " . $adat['kernev'] . "</p>"; 
         }
 
         if ($adat['szuldatum_publikus'] == 1) {
