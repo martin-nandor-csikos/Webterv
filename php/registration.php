@@ -77,10 +77,11 @@ if (isset($email) && isset($fhnev) && isset($jelszo) && isset($jelszoIsm) && iss
         //Query = utasítás
         //(email, fhnev, jelszo...) --> az email, fhnev, jelszo...sorokba kerülnek az értékek
         //VALUES ($email, $fhnev...) --> a formban megadott adatok
-        $sqlQuery = "INSERT INTO users (email, fhnev, jelszo, veznev, kernev, szuldatum, nem) VALUES ('$email', '$fhnev', '$hasheltJelszo', '$veznev', '$kernev', '$szuldatum', '$nem')";
+        $users = "INSERT INTO users (email, fhnev, jelszo, veznev, kernev, szuldatum, nem) VALUES ('$email', '$fhnev', '$hasheltJelszo', '$veznev', '$kernev', '$szuldatum', '$nem')";
+        $userprofile = "INSERT INTO userprofile (userId) VALUES (LAST_INSERT_ID())";
 
         //Ha sikerült elvégezni az utasítást (bekerültek az adatok a táblába)
-        if ($csatlakozas->query($sqlQuery) === TRUE) {
+        if ($csatlakozas->query($users) === TRUE && $csatlakozas->query($userprofile) === TRUE) {
             //Átirányítás a bejelentkezési oldalra
             header("Location: ./../loginPage.php");
         } else {
