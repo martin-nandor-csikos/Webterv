@@ -55,7 +55,7 @@
     </header>
 
     <?php
-    echo "<h1>Üdvözöljük, " . $_SESSION['fhnev'] . "!</h1>"; 
+    echo "<h1 id='udvozlet'>Üdvözöljük, " . $_SESSION['fhnev'] . "!</h1>"; 
     ?>
     <h2 class="title">Hírek</h2>
 

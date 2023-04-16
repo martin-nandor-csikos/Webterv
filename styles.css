@@ -1190,7 +1190,7 @@ input[type="submit"]:hover {
     max-width: 1200px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #d4a373;
+    background-color: #ffe5cc;
 }
 
 
@@ -1235,4 +1235,9 @@ input[type="submit"]:hover {
     text-align: center;
     font-size: 20px;
     margin-bottom: 70px;
+}
+
+#udvozlet {
+    text-align: center;
+    margin-top: 50px;
 }
