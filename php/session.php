@@ -4,9 +4,10 @@ function startSession() {
     session_start();
 }
 
-function setSessionData($fhnev) {
+function setSessionData($fhnev, $id) {
     //User felhasználónevének eltárolása
     $_SESSION['fhnev'] = $fhnev;
+    $_SESSION['id'] = (int)$id;
 }
 
 //Session befejezése

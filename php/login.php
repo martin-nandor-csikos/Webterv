@@ -19,9 +19,13 @@ if (isset($fhnev) && isset($jelszo)) {
         while($user = $eredmeny->fetch_assoc()) {
             if (password_verify($jelszo, $user['jelszo'])) {
                 //Átirányítás a bejelentkezett oldalra
+                $idSQL = "SELECT id FROM users WHERE fhnev='$fhnev'";
+                $idEredmeny = $csatlakozas->query($idSQL);
+                $id = $idEredmeny->fetch_assoc();
+                
                 header("Location: ./../hirek.php");
                 startSession();
-                setSessionData($fhnev);
+                setSessionData($fhnev, $id['id']);
             } else {
                 echo "Hibás jelszó.";
             }
