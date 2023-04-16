@@ -1161,3 +1161,28 @@ input[type="submit"]:hover {
     font-size: 20px;
 }
 
+
+/* getNews.php */
+#datum {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#cim {
+    color: black;
+    font-size: 24px;
+}
+
+#szoveg {
+    color: #666;
+    font-size: 16px;
+}
+
+.news {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #d4a373;
+}
+
