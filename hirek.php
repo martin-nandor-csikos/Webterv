@@ -56,11 +56,7 @@
     </header>
 
     <?php
-<<<<<<< HEAD
-    echo "<h1>Üdvözöljük, " . $_SESSION['fhnev'] . "!</h1>";
-=======
     echo "<h1 id='udvozlet'>Üdvözöljük, " . $_SESSION['fhnev'] . "!</h1>"; 
->>>>>>> 70e43f9c6e461e11b27614fa86d88907d40d7c4f
     ?>
     <h2 class="title">Hírek</h2>
 
