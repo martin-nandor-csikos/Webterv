@@ -76,7 +76,7 @@
     <form id="keresesform" action="./php/searchUsers.php" method="GET">
         <label id="kereseslabel" for="fhnev">Felhasználónév</label>
         <br>
-        <input id="keresesmezo" type="text" name="fhnev" maxlength="255" minlength="3">
+        <input id="keresesmezo" type="text" name="fhnev" maxlength="255" minlength="2">
 
         <input id="keresesgomb" type="submit" value="Keresés">
     </form>
