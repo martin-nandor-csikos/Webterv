@@ -1190,6 +1190,54 @@ input[type="submit"]:hover {
     max-width: 1200px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #d4a373;
+    background-color: #ffe5cc;
 }
 
+
+/* getMessages.php */
+#messages-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    border: 1px solid #000;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#datetime {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#sentFrom {
+    color: red;
+    font-size: 16px;
+}
+
+#sentTo {
+    color: green;
+    font-size: 16px;
+}
+
+#message {
+    font-size: 16px;
+}
+
+.some {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+#udvozlet {
+    text-align: center;
+    margin-top: 50px;
+}
