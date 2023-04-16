@@ -14,11 +14,11 @@ if ($eredmeny->num_rows > 0) {
     echo "<div id='messages-container'>";
     //Kiiratjuk az időt, az üzenet küldőjét, címzettét, és az üzenetet
     while ($uzenet = $eredmeny->fetch_assoc()) {
-        echo "<div class='message'>";
-        echo "<p id='datetime'>" . $uzenet['datetime'] . "</p>";
-        echo "<p id='sentFrom'>Küldő: " . $uzenet['sentFrom'] . "</p>";
-        echo "<p id='sentTo'>Címzett: " . $uzenet['sentTo'] . "</p>";
-        echo "<p id='message'>Üzenet: " . $uzenet['message'] . "</p>";
+        echo "<div class=\"message\">";
+        echo "<p class=\"datetime\">" . $uzenet['datetime'] . "</p>";
+        echo "<p class=\"sentFrom\">Küldő: " . $uzenet['sentFrom'] . "</p>";
+        echo "<p class=\"sentTo\">Címzett: " . $uzenet['sentTo'] . "</p>";
+        echo "<p class=\"message\">Üzenet: " . $uzenet['message'] . "</p>";
         echo "</div>";
     }
     echo "</div>";

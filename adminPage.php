@@ -68,7 +68,7 @@
 
         <label for="szoveg">Cikk szövege:</label>
         <br>
-        <textarea name="szoveg" id="" cols="30" rows="10"></textarea>
+        <textarea name="szoveg" id="szoveg" cols="30" rows="10"></textarea>
         <br>
 
         <input type="submit" value="Cikk létrehozása">
@@ -78,7 +78,7 @@
     <form action="./php/deleteUser.php" method="POST">
         <label for="fhnev">Felhasználónév:</label>
         <br>
-        <input type="text" name="fhnev" maxlength="255">
+        <input type="text" id="fhnev" name="fhnev" maxlength="255">
         <br>
 
         <input type="submit" value="Törlés">

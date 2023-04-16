@@ -46,16 +46,14 @@
     <form id="loginform" action="./php/login.php" method="POST">
         <label class="labels" for="fhnev">Felhasználónév:</label>
         <br>
-        <input class="szoveges" type="text" name="fhnev" maxlength="255" minlength="2" required>
+        <input class="szoveges" id="fhnev" type="text" name="fhnev" maxlength="255" minlength="2" required>
         <br><br>
 
         <label class="labels" for="jelszo">Jelszó:</label>
         <br>
-        <input class="szoveges" type="password" name="jelszo" maxlength="255" minlength="6" required>
+        <input class="szoveges" id="jelszo" type="password" name="jelszo" maxlength="255" minlength="6" required>
         <br>
         <input type="submit" name="bejelentkezes" value="Bejelentkezés">
     </form>
-    
-    <button id="reggomb"><a href="./registrationPage.php">Nincs még fiókod?</a></button>
 </body>
 </html>

@@ -46,53 +46,52 @@
     <form id="registrationform" action="./php/registration.php" method="POST">
         <label class="labels" for="email">E-mail</label>
         <br>
-        <input class="szoveges" type="email" name="email" maxlength="255">
+        <input class="szoveges" id="email" type="email" name="email" maxlength="255">
         <br><br>
 
         <label class="labels" for="fhnev">Felhasználónév:</label>
         <br>
-        <input class="szoveges" type="text" name="fhnev" maxlength="255" minlength="3">
+        <input class="szoveges" id="fhnev" type="text" name="fhnev" maxlength="255" minlength="3">
         <br><br>
 
         <label class="labels" for="veznev">Vezetéknév</label>
         <br>
-        <input class="szoveges" type="text" name="veznev" maxlength="255" minlength="2">
+        <input class="szoveges" id="veznev" type="text" name="veznev" maxlength="255" minlength="2">
         <br><br>
 
         <label class="labels" for="kernev">Keresztnév</label>
         <br>
-        <input class="szoveges" type="text" name="kernev" maxlength="255" minlength="2">
+        <input class="szoveges" id="kernev" type="text" name="kernev" maxlength="255" minlength="2">
         <br><br>
 
         <label class="labels" for="jelszo">Jelszó</label>
         <br>
-        <input class="szoveges" type="password" name="jelszo" maxlength="255" minlength="6">
+        <input class="szoveges" id="jelszo" type="password" name="jelszo" maxlength="255" minlength="6">
         <br><br>
 
         <label class="labels" for="jelszoIsm">Jelszó ismét</label>
         <br>
-        <input class="szoveges" type="password" name="jelszoIsm" maxlength="255" minlength="6">
+        <input class="szoveges" id="jelszoIsm" type="password" name="jelszoIsm" maxlength="255" minlength="6">
         <br><br>
 
         <label class="labels" for="szuldatum">Szuletési dátum</label>
         <br>
-        <input type="date" name="szuldatum">
+        <input type="date" id="szuldatum" name="szuldatum">
         <br><br>
 
-        <label class="labels" for="nem">Nem</label>
         <br>
-        <ul style="list-style-type: none">
+        <ul class="hideListStyle">
             <li>
-                <input class="radio" type="radio" name="nem" value="ferfi">
-                <label class="labels" for="nem">Férfi</label>
+                <input class="radio" id="ferfi" type="radio" name="nem" value="ferfi">
+                <label class="labels" for="ferfi">Férfi</label>
             </li>
             <li>
-                <input class="radio" type="radio" name="nem" value="no">
-                <label class="labels" for="nem">Nő</label>
+                <input class="radio" id="no" type="radio" name="nem" value="no">
+                <label class="labels" for="no">Nő</label>
             </li>
             <li>
-                <input class="radio" type="radio" name="nem" value="egyeb">
-                <label class="labels" for="nem">Egyéb</label>
+                <input class="radio" id="egyeb" type="radio" name="nem" value="egyeb">
+                <label class="labels" for="egyeb">Egyéb</label>
             </li>
         </ul>
 

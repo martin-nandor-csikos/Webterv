@@ -62,7 +62,7 @@
             <a style="padding-left: 60px; padding-right: 60px;" href="hirek.php" id="forumpage" class="notActive">Hírek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="#" id="search" class="active">Felhasználók keresése</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="userProfile.php" id="" class="notActive">Adatlap</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="userProfile.php" class="notActive">Adatlap</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="privateMessages.php" class="notActive">Üzenetek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="logoutPage.php" id="logout" class="notActive">Kijelentkezés</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
@@ -74,9 +74,9 @@
         </nav>
     </header>
     <form id="keresesform" action="./php/searchUsers.php" method="GET">
-        <label id="kereseslabel" for="fhnev">Felhasználónév</label>
+        <label for="fhnev">Felhasználónév</label>
         <br>
-        <input id="keresesmezo" type="text" name="fhnev" maxlength="255" minlength="2">
+        <input id="fhnev" type="text" name="fhnev" maxlength="255" minlength="2">
 
         <input id="keresesgomb" type="submit" value="Keresés">
     </form>

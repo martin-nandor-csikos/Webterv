@@ -42,7 +42,7 @@
             <a style="padding-left: 60px; padding-right: 60px;" href="hirek.php" id="forumpage" class="notActive">Hírek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="userProfile.php" id="" class="notActive">Adatlap</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="userProfile.php" class="notActive">Adatlap</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="privateMessages.php" class="active">Üzenetek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="logoutPage.php" id="logout" class="notActive">Kijelentkezés</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
@@ -60,12 +60,12 @@
     <form id="uzenetform" action="./php/sendPrivateMessage.php" method="POST">
         <label for="kinek">Címzett</label>
         <br>
-        <input type="text" name="kinek" maxlength="255" minlength="3">
+        <input type="text" id="kinek" name="kinek" maxlength="255" minlength="3">
 
         <br>
         <label for="uzenet">Üzenet</label>
         <br>
-        <textarea name="uzenet" cols="30" rows="10"></textarea>
+        <textarea name="uzenet" id="uzenet" cols="30" rows="10"></textarea>
 
         <input type="submit" value="Küldés">
     </form>    
