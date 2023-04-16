@@ -55,8 +55,8 @@
     <h1 class="title">Privát üzenetek</h1>
     <?php require "./php/getPrivateMessage.php" ?>
 
-    <h2>Üzenet küldése egy felhasználónak</h2>
-    <form action="./php/sendPrivateMessage.php" method="POST">
+    <h2 id="uzenetcim">Üzenet küldése egy felhasználónak</h2>
+    <form id="uzenetform" action="./php/sendPrivateMessage.php" method="POST">
         <label for="kinek">Címzett</label>
         <br>
         <input type="text" name="kinek" maxlength="255" minlength="3">
