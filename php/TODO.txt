@@ -1,7 +1,6 @@
 - Saját adatlap (visibility beállításokkal --> privát/publikus), profilképpel (kép feltöltése az adatlapon)
 - Mások adatlapjának megtekintése
-- Termékek kosárba helyezése, rating system --> szerveren tárolt
 - Ismerős felvétele
-- Admin jogosultság (rendelések törlése, felhasználók letiltása)
 
++ Admin jogosultság (rendelések törlése, felhasználók letiltása)
 + Fiók törlés
