@@ -18,6 +18,7 @@ $kernev_publikus = $_POST['kernev_publikus'];
 $email_publikus = $_POST['email_publikus'];
 $nem_publikus = $_POST['nem_publikus'];
 $szuldatum_publikus = $_POST['szuldatum_publikus'];
+$bio = $_POST['bio'];
 
 $hibak = [];
 $id = $_SESSION['id'];
@@ -85,6 +86,11 @@ if (isset($ujSzuldatum) && $ujSzuldatum != "") {
         $sqlQuery = "UPDATE users SET szuldatum='$ujSzuldatum' WHERE id=$id";
         $csatlakozas->query($sqlQuery);
     }
+}
+
+if (isset($bio) && $bio != "") {
+    $sqlQuery = "UPDATE userprofile SET bio='$bio' WHERE userId=$id";
+    $csatlakozas->query($sqlQuery);
 }
 
 if (isset($veznev_publikus) && $veznev_publikus != "") {

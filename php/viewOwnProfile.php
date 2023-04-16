@@ -16,6 +16,7 @@ if ($eredmeny->num_rows > 0) {
         echo "<p>E-mail: " . $adat['email'] . "</p>";
         echo "<p>Születési dátum: " . $adat['szuldatum'] . "</p>";
         echo "<p>Nem: " . $adat['nem'] . "</p>";
+        echo "<p>Bio:<br>" . $adat['bio'] . "</p>";
 
         echo "<br><br>";
 

@@ -1,6 +1,6 @@
-- Saját adatlap (visibility beállításokkal --> privát/publikus), profilképpel (kép feltöltése az adatlapon)
 - Mások adatlapjának megtekintése
 - Ismerős felvétele
 
++ Saját adatlap (visibility beállításokkal --> privát/publikus), profilképpel (kép feltöltése az adatlapon)
 + Admin jogosultság (rendelések törlése, felhasználók letiltása)
 + Fiók törlés
