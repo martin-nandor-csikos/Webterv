@@ -9,7 +9,7 @@ if (isset($cim) && isset($szoveg)) {
     $sqlQuery = "INSERT INTO news (cim, szoveg) VALUES ('$cim', '$szoveg')";
 
     if ($csatlakozas->query($sqlQuery) === TRUE) {
-        header("Location: ./getNews.php");
+        header("Location: ./../hirek.php");
     } else {
         echo "Hiba történt.";
     }
