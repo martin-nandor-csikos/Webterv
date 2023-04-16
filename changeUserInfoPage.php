@@ -53,32 +53,32 @@
         </nav>
     </header>
     <form id="changeinfoform" action="./php/changeUserInfo.php" method="POST">
-        <label class="labels" for="ujEmail">Új e-mail</label>
+        <label class="labels" for="ujEmail">Új e-mail (max 255 karakter)</label>
         <br>
         <input class="szoveges" id="ujEmail" type="email" name="ujEmail" maxlength="255">
         <br><br>
 
-        <label class="labels" for="ujFhnev">Új felhasználónév:</label>
+        <label class="labels" for="ujFhnev">Új felhasználónév (max 255 karakter, minimum 3 karakter)</label>
         <br>
         <input class="szoveges" id="ujFhnev" type="text" name="ujFhnev" maxlength="255" minlength="3">
         <br><br>
 
-        <label class="labels" for="ujVeznev">Új vezetéknév</label>
+        <label class="labels" for="ujVeznev">Új vezetéknév (max 255 karakter, minimum 2 karakter)</label>
         <br>
         <input class="szoveges" id="ujVeznev" type="text" name="ujVeznev" maxlength="255" minlength="2">
         <br><br>
 
-        <label class="labels" for="ujKernev">Új keresztnév</label>
+        <label class="labels" for="ujKernev">Új keresztnév (max 255 karakter, minimum 2 karakter)</label>
         <br>
         <input class="szoveges" id="ujKernev" type="text" name="ujKernev" maxlength="255" minlength="2">
         <br><br>
 
-        <label class="labels" for="ujJelszo">Új jelszó</label>
+        <label class="labels" for="ujJelszo">Új jelszó (max 255 karakter, minimum 6 karakter)</label>
         <br>
         <input class="szoveges" id="ujJelszo" type="password" name="ujJelszo" maxlength="255" minlength="6">
         <br><br>
 
-        <label class="labels" for="ujJelszoIsm">Új jelszó ismét</label>
+        <label class="labels" for="ujJelszoIsm">Új jelszó ismét (max 255 karakter, minimum 6 karakter)</label>
         <br>
         <input class="szoveges" id="ujJelszoIsm" type="password" name="ujJelszoIsm" maxlength="255" minlength="6">
         <br><br>
@@ -178,6 +178,12 @@
                 <label class="labels" for="privatNem">Privát</label>            
             </li>
         </ul>
+        <br><br>
+
+        <label class="labels">Fiók törlése</label>
+        <br>
+        <input type="checkbox" id="torles" name="torles" value="torles">
+        <label for="torles">Ki szeretném törölni a fiókomat.</label> 
         <br><br>
 
         <input type="submit" value="Elküldés">

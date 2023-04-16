@@ -19,6 +19,7 @@ $email_publikus = $_POST['email_publikus'];
 $nem_publikus = $_POST['nem_publikus'];
 $szuldatum_publikus = $_POST['szuldatum_publikus'];
 $bio = $_POST['bio'];
+$torles = $_POST['torles'];
 
 $hibak = [];
 $id = $_SESSION['id'];
@@ -136,6 +137,10 @@ if (isset($nem_publikus)) {
         $sqlQuery = "UPDATE userprofile SET nem_publikus='$nem_publikus' WHERE userId=$id";
         $csatlakozas->query($sqlQuery);
     }
+}
+
+if (isset($torles)) {
+    require "deleteAccount.php";
 }
 
 if (count($hibak) != 0) {

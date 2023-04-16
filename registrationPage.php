@@ -44,37 +44,37 @@
         </nav>
     </header>
     <form id="registrationform" action="./php/registration.php" method="POST">
-        <label class="labels" for="email">E-mail</label>
+        <label class="labels" for="email">E-mail (max 255 karakter)</label>
         <br>
         <input class="szoveges" id="email" type="email" name="email" maxlength="255">
         <br><br>
 
-        <label class="labels" for="fhnev">Felhasználónév:</label>
+        <label class="labels" for="fhnev">Felhasználónév (max 255 karakter, minimum 3 karakter)</label>
         <br>
         <input class="szoveges" id="fhnev" type="text" name="fhnev" maxlength="255" minlength="3">
         <br><br>
 
-        <label class="labels" for="veznev">Vezetéknév</label>
+        <label class="labels" for="veznev">Vezetéknév (max 255 karakter, minimum 2 karakter)</label>
         <br>
         <input class="szoveges" id="veznev" type="text" name="veznev" maxlength="255" minlength="2">
         <br><br>
 
-        <label class="labels" for="kernev">Keresztnév</label>
+        <label class="labels" for="kernev">Keresztnév (max 255 karakter, minimum 2 karakter)</label>
         <br>
         <input class="szoveges" id="kernev" type="text" name="kernev" maxlength="255" minlength="2">
         <br><br>
 
-        <label class="labels" for="jelszo">Jelszó</label>
+        <label class="labels" for="jelszo">Jelszó (max 255 karakter, minimum 6 karakter)</label>
         <br>
         <input class="szoveges" id="jelszo" type="password" name="jelszo" maxlength="255" minlength="6">
         <br><br>
 
-        <label class="labels" for="jelszoIsm">Jelszó ismét</label>
+        <label class="labels" for="jelszoIsm">Jelszó ismét (max 255 karakter, minimum 6 karakter)</label>
         <br>
         <input class="szoveges" id="jelszoIsm" type="password" name="jelszoIsm" maxlength="255" minlength="6">
         <br><br>
 
-        <label class="labels" for="szuldatum">Szuletési dátum</label>
+        <label class="labels" for="szuldatum">Születési dátum</label>
         <br>
         <input type="date" id="szuldatum" name="szuldatum">
         <br><br>
