@@ -104,6 +104,81 @@
             </li>
         </ul>
 
+        <label class="labels" for="bio">Bio</label>
+        <br>
+        <textarea name="bio" cols="60" rows="10"></textarea>
+        <br><br>
+
+        <label class="labels" for="bio">Vezetéknév láthatóság</label>
+        <br>
+        <ul>
+            <li>
+                <input class="radio" type="radio" name="veznev_publikus" value="1">
+                <label class="labels" for="veznev_publikus">Publikus</label>            
+            </li>
+            <li>
+                <input class="radio" type="radio" name="veznev_publikus" value="0">
+                <label class="labels" for="veznev_publikus">Privát</label>            
+            </li>
+        </ul>
+        <br><br>
+
+        <label class="labels" for="bio">Keresztnév láthatóság</label>
+        <br>
+        <ul>
+            <li>
+                <input class="radio" type="radio" name="kernev_publikus" value="1">
+                <label class="labels" for="kernev_publikus">Publikus</label>            
+            </li>
+            <li>
+                <input class="radio" type="radio" name="kernev_publikus" value="0">
+                <label class="labels" for="kernev_publikus">Privát</label>            
+            </li>
+        </ul>
+        <br><br>
+
+        <label class="labels" for="bio">E-mail láthatóság</label>
+        <br>
+        <ul>
+            <li>
+                <input class="radio" type="radio" name="email_publikus" value="1">
+                <label class="labels" for="email_publikus">Publikus</label>            
+            </li>
+            <li>
+                <input class="radio" type="radio" name="email_publikus" value="0">
+                <label class="labels" for="email_publikus">Privát</label>            
+            </li>
+        </ul>
+        <br><br>
+
+        <label class="labels" for="bio">Születési dátum láthatóság</label>
+        <br>
+        <ul>
+            <li>
+                <input class="radio" type="radio" name="szuldatum_publikus" value="1">
+                <label class="labels" for="szuldatum_publikus">Publikus</label>            
+            </li>
+            <li>
+                <input class="radio" type="radio" name="szuldatum_publikus" value="0">
+                <label class="labels" for="szuldatum_publikus">Privát</label>            
+            </li>
+        </ul>
+        <br><br>
+
+        <label class="labels" for="bio">Nem láthatóság</label>
+        <br>
+        <ul>
+            <li>
+                <input class="radio" type="radio" name="nem_publikus" value="1">
+                <label class="labels" for="nem_publikus">Publikus</label>            
+            </li>
+            <li>
+                <input class="radio" type="radio" name="nem_publikus" value="0">
+                <label class="labels" for="nem_publikus">Privát</label>            
+            </li>
+        </ul>
+        <br><br>
+
         <input type="submit" value="Elküldés">
     </form>
 </body>
