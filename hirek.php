@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bejelentkezett</title>
-    <link rel="stylesheet" href="styles.css">
 
-    <?php
-        require "./php/session.php";
-        startSession();
-        checkSession();
-    ?>
+    <title>Webshop - SZKA</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/icon.png">
 </head>
+
 <body>
+    <!--Header-->
     <header id="indexHeader">
         <!--Small info bar-->
         <div id="infoBar">
@@ -38,16 +37,28 @@
 
         <!--Menu bar-->
         <nav id="menuBar">
-        <a style="padding-left: 60px; padding-right: 60px;" href="forum.html" id="forumpage" class="notActive">Fórum</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="forumpage" class="active">Hírek</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="searchUsersPage.php" id="search" class="notActive">Felhasználók keresése</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
-            <a style="padding-left: 60px; padding-right: 60px;" href="#" id="logout" class="active">Kijelentkezés</a>
             <a style="padding-left: 60px; padding-right: 60px;" href="index.html" id="backtoindex" class="notActive">Kilépés a fórumból</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="logoutPage.php" id="logout" class="notActive">Kijelentkezés</a>
+            <a style="padding-left: 60px; padding-right: 60px;" href="changeUserInfoPage.php" id="changeinfo" class="notActive">Profil módosítása</a>
+            <?php
+            require "./php/session.php";
+            startSession();
+
+            if ($_SESSION['fhnev'] == "admin") {
+                echo "<a style='padding-left: 60px; padding-right: 60px;' href='adminPage.php' id='adminPage' class='notActive'>Admin felület</a>";
+            }
+            ?>
         </nav>
     </header>
-    <p id="kijszoveg">Máris távozol?</p>
-    <form action="./php/logout.php" method="POST">
-        <input id="kijgomb" type="submit" name="kijelentkezes" value="Kijelentkezés">
-    </form>
+
+    <?php
+    echo "<h1>Üdvözöljük, " . $_SESSION['fhnev'] . "!</h1>"; 
+    ?>
+    <h2 class="title">Hírek</h2>
+
+    <?php include "./php/getNews.php" ?>
+
 </body>
 </html>
