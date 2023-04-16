@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2023 at 11:52 AM
+-- Generation Time: Apr 16, 2023 at 08:40 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -39,8 +39,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `cim`, `szoveg`, `datum`) VALUES
-(1, 'asdawdawd', 'jahwdlkjawhdlkjAhwlkdjhaWdkhaw.a\r\nw\r\nda\r\nwd\r\naw\r\nd\r\nawd\r\neg\r\nrsgsr\r\ngk\r\nrgsr\r\ngksr\r\ngsr\r\ngks\r\nrgk\r\nsrkg\r\nsrkg\r\nkdr\r\ngkd\r\nkd\r\nrkg\r\ndrkg\r\nrkg', '2023-04-16 11:23:05'),
-(2, 'awjhdl', 'lkjhalkwjdhawd', '2023-04-16 11:28:48');
+(3, 'Megnyílt a megújult fórumunk!', 'Ma este befejeződtek a munkálatok, megnyílt a megújult fórumunk!\r\n\r\nRengeteg új funkcióval ruháztuk fel a fórumot, mint például az üzenetküldés, ahol egymásnak tudtok üzeneteket küldeni.\r\n\r\nReméljük tetszik nektek az új oldal!', '2023-04-16 20:36:04'),
+(4, 'Új pozíció betöltése: recepciós', 'Szeretnél recepciósként dolgozni a menhelyünkön? Töltsd ki a jelentkezési lapot az oldalunkon az \"Önkéntesség\" fülön.', '2023-04-16 20:38:29');
 
 -- --------------------------------------------------------
 
@@ -61,10 +61,9 @@ CREATE TABLE `private_messages` (
 --
 
 INSERT INTO `private_messages` (`id`, `sentTo`, `sentFrom`, `message`, `datetime`) VALUES
-(1, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:08'),
-(2, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:26'),
-(3, 'jeno1', 'DavidxHUN', 'cs', '2023-04-03 15:41:27'),
-(4, 'DavidxHUN', 'jeno1', 'helo', '2023-04-03 15:44:08');
+(7, 'admin', 'KerekesKrisztinaMLM', 'Nekem nagyon tetszik ez az oldal, ha rajtam múlna, én fizetnék is érte. Megvehetem az oldalukat?', '2023-04-16 20:28:14'),
+(8, 'jeno1', 'DavidxHUN', 'Szép napot Jenő bácsi! Holnap meglocsolom a virágukat, ahogy kérték! Mennyi víz kell nekik?', '2023-04-16 20:29:50'),
+(9, 'DavidxHUN', 'jeno1', 'szia dávid, ne locsold túl őket, mert abból probléma lesz a virágoknak. 1-2 bögrényi víz teljesen elég. köszönjük szépen hogy gondoskodsz a virágokról, míg elutaztunk szegedre klárival', '2023-04-16 20:33:01');
 
 -- --------------------------------------------------------
 
@@ -75,7 +74,6 @@ INSERT INTO `private_messages` (`id`, `sentTo`, `sentFrom`, `message`, `datetime
 CREATE TABLE `userprofile` (
   `id` int(11) NOT NULL COMMENT 'Primary kulcs',
   `userId` int(11) NOT NULL COMMENT 'user tábla primary kulcs',
-  `profilkep` varchar(255) DEFAULT NULL COMMENT 'Profilkép útvonala a szerveren',
   `bio` text DEFAULT NULL COMMENT 'Bemutatkozás',
   `kernev_publikus` tinyint(1) NOT NULL DEFAULT 0 COMMENT 'Keresztnév publikussága (true/false)',
   `veznev_publikus` tinyint(1) NOT NULL DEFAULT 0 COMMENT 'Vezetéknév publikussága (true/false)',
@@ -83,6 +81,17 @@ CREATE TABLE `userprofile` (
   `email_publikus` tinyint(1) NOT NULL DEFAULT 0 COMMENT 'E-mail publikussága (true/false)',
   `nem_publikus` tinyint(1) NOT NULL DEFAULT 0 COMMENT 'Nem publikussága (true/false)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Felhasználók saját adatlapja';
+
+--
+-- Dumping data for table `userprofile`
+--
+
+INSERT INTO `userprofile` (`id`, `userId`, `bio`, `kernev_publikus`, `veznev_publikus`, `szuldatum_publikus`, `email_publikus`, `nem_publikus`) VALUES
+(4, 12, 'Szeretek kertészkedni!', 1, 1, 1, 1, 1),
+(5, 13, 'CSGO rank: kereszt kala\r\n1v1 me bro', 1, 1, 0, 0, 1),
+(6, 14, 'Új állást keresnél, ahol te magad vagy a főnök? Ne habozz, én segítek neked!\r\nCsupán annyi a teendőd, hogy beszervezel magad alá még 20 embert, és pár hónap elteltével milliomos leszel!', 1, 1, 0, 0, 0),
+(7, 15, NULL, 1, 1, 0, 0, 0),
+(8, 16, NULL, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -108,11 +117,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `jogosultsag`, `email`, `fhnev`, `jelszo`, `veznev`, `kernev`, `szuldatum`, `nem`) VALUES
 (3, 'admin', NULL, 'admin', '$2y$10$uZTeV.HBOkj7xvKD2.tzZOnVqNQTyO/tSMZcydTFkMuqqiEJKPl1.', NULL, NULL, NULL, NULL),
-(4, 'user', 'jeno@asd.hu', 'jeno1', '$2y$10$nBkBQ8BY59DT0oo/ltALBeBPpQI5Ea6jSExjispKVr6ORArMjPfaG', 'Kovács', 'Jenő', '1980-01-23', 'ferfi'),
-(5, 'user', 'david@asd.hu', 'DavidxHUN', '$2y$10$NXYY3mOVCQZul8jEtPbZeujku9jGdnuyNwqYjnmntzFfx59WREDTa', 'Boros', 'Dávid', '2010-08-03', 'ferfi'),
-(6, 'user', 'kerkriszta@mlm.hu', 'KerekesKrisztaMLM', '$2y$10$pnIn4ZFjsQMdVhNDG1BU7OkFkgQJTakbiXIUMz1dtJkKgw0WtRS1i', 'Kerekes', 'Kriszta', '2000-07-29', 'no'),
-(7, 'user', 'forgoeszti@asd.hu', 'eszti1997', '$2y$10$S8D82sQoLswUN6.edqnqmu4OBLouQHSUc9Va7PEvsLFdtTlQqNx2e', 'Forgó', 'Eszter', '1997-12-30', 'no'),
-(8, 'user', 'vargagabi@asd.hu', 'gabi123', '$2y$10$J43eCWI4r5JyCw.jL5qY.O1QtEPBj8LR1a84r0mpuZWzjIPNDaYwm', 'Varga', 'Gabi', '1999-06-21', 'egyeb');
+(12, 'user', 'kovacs.jeno@asd.asd', 'jeno1', '$2y$10$WnaHPDG3z2phsACG3eUKleDC0ZMhjAyb1ZMuaa2.m9SkFv1G4a5yy', 'Kovács', 'Jenő', '1970-10-01', 'ferfi'),
+(13, 'user', 'davidxhun@asd.asd', 'DavidxHUN', '$2y$10$I3EuIgeIJ5RyGCEfffwAEOXgcVOQ76Qx0pMmd54AhwTBFGFNMcPOu', 'Kanalas', 'Dávid', '2010-05-10', 'ferfi'),
+(14, 'user', 'kriszta@asd.asd', 'KerekesKrisztinaMLM', '$2y$10$/3bhd.t75GkqMNmlJhWt7uSow0qjL93BenEv3oNOaGT9GwOI3g3Vi', 'Kerekes', 'Kriszta', '1990-10-01', 'no'),
+(15, 'user', 'eszter@asd.asd', 'eszti1997', '$2y$10$yjFukgdjUN3.bOBp3C4IoOShbXX02lvPCx0SvbZVtB5sak9oQfUT6', 'Eszter', 'Eszter', '1997-05-05', 'no'),
+(16, 'user', 'gabi@asd.asd', 'gabi123', '$2y$10$chxVESIBxlXXjcUYx9/ceebc343GqnIoLCSNEqoYjO4RnAIYjOhxq', 'Álmos', 'Gabi', '1980-04-04', 'egyeb');
 
 --
 -- Indexes for dumped tables
@@ -153,25 +162,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `private_messages`
 --
 ALTER TABLE `private_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `userprofile`
 --
 ALTER TABLE `userprofile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary kulcs', AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables

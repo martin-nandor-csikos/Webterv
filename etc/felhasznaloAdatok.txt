@@ -2,13 +2,13 @@ fhnev: admin
 jelszo: adminadmin
 
 fhnev: jeno1
-jelszo: jeno12345
+jelszo: jeno1234
 
 fhnev: DavidxHUN
 jelszo: l33t1337
 
 fhnev: KerekesKrisztinaMLM
-jelszo: nemKamuNemMLM
+jelszo: nematveres1
 
 fhnev: eszti1997
 jelszo: qwertzuiop
