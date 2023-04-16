@@ -16,26 +16,6 @@
             header("Location: hirek.php");
         }
     ?>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#keresesform').submit(function(event) {
-                event.preventDefault();
-
-                var formData = $(this).serialize();
-
-                $.ajax({
-                type: 'GET',
-                url: './php/searchUsers.php',
-                data: formData,
-                success: function(response) {
-                    $('#searchResults').html(response);
-                }
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -92,6 +72,15 @@
 
         <input type="submit" value="Cikk létrehozása">
     </form>
-    <div id="searchResults"></div>
+
+    <h2>Felhasználó törlése</h2>
+    <form action="./php/deleteUser.php" method="POST">
+        <label for="fhnev">Felhasználónév:</label>
+        <br>
+        <input type="text" name="fhnev" maxlength="255">
+        <br>
+
+        <input type="submit" value="Törlés">
+    </form>
 </body>
 </html>
