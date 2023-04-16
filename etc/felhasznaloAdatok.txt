@@ -1,5 +1,5 @@
 fhnev: admin
-jelszo: admin
+jelszo: adminadmin
 
 fhnev: jeno1
 jelszo: jeno12345
