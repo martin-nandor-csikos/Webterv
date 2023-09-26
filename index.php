@@ -1,5 +1,5 @@
 <?php
 
-echo "fasz";
+echo "geci";
 
 ?>
